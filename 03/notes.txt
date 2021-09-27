@@ -1,0 +1,30 @@
+Fang Chen
+APCS
+HW05 -- Summer Assignment: 03 Void Methods
+2021-09-27
+
+Exercise:
+
+public static void zoop() {
+    baffle();
+    System.out.print("You wugga ");
+    baffle();
+}
+
+public static void main(String[] args) {
+    System.out.print("No, I ");
+    zoop();
+    System.out.print("I ");
+    baffle();
+}
+
+public static void baffle() {
+    System.out.print("wug");
+    ping();
+}
+
+public static void ping() {
+    System.out.println(".");
+}
+
+Output: No, I wug. You wugga wug. I wug.

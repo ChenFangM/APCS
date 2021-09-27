@@ -1,0 +1,72 @@
+Fang Chen
+APCS
+HW05 -- Summer Assignment: 02 Data Types
+2021-09-27
+
+===========================
+File name: Date.java
+===========================
+
+public class Date{
+    
+	public static void main(String[] args){
+		String day, month;
+		int date, year;
+		day = "Thursday";
+		month = "September";
+		date = 9;
+		year = 2021;
+		System.out.println("American format:");
+		System.out.println(day + ", " + month + " " + date + ", " + year);
+		System.out.println("European format:");
+		System.out.println(day + " " + date + " " + month + " " + year);
+	}
+
+}
+
+===========================
+File name: Time.java
+===========================
+
+public class Time{
+
+	public static void main(String[] args){
+		int hour, min, sec, secondsSinceMid;
+		hour = 16;
+		min = 17;
+		sec = 45;
+		secondsSinceMid = hour * 3600 + min * 60 + sec;
+		System.out.println("Seconds since midnight: " + secondsSinceMid);
+		System.out.println("Seconds till tomorrow: " + (86400 - secondsSinceMid));
+		double percentOfDay = (secondsSinceMid * 100.0) / 86400.0;
+		System.out.println("Percent of day: " + percentOfDay + "%");
+		hour = 16;
+		min = 26;
+		sec = 31;
+		System.out.println("Seconds elapsed: " + (hour * 3600 + min * 60 + sec - secondsSinceMid));
+	}
+
+}
+
+===========================
+File name: GuessNumber.java
+===========================
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class GuessNumber {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+        int number = random.nextInt(100) + 1;
+        System.out.println("I'm thinking of a number between 1 and 100 \n(including both). Can you guess what it is?");
+        Scanner in = new Scanner(System.in);
+        System.out.print("Type a number: ");
+        int guess = in.nextInt();
+        System.out.println("Your guess is: " + guess);
+        System.out.println("The number I was thinking of is: " + number);
+        System.out.println("You were off by: " + Math.abs(guess - number));
+    }
+
+}

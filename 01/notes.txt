@@ -1,0 +1,19 @@
+Fang Chen
+APCS
+HW05 -- Summer Assignment: 01 Hello World
+2021-09-27
+
+===========================
+File name: Hello.java
+===========================
+
+public class Hello{
+	public static void main(String[] args){
+		System.out.println("Hello world!");
+	}
+}
+
+===========================
+In terminal: javac Hello
+Result: Compiled Hello.java to Hello.class
+===========================
