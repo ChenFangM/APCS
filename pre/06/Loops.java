@@ -1,14 +1,3 @@
-Fang Chen
-APCS
-HW05 -- Summer Assignment: 06 Loops
-2021-09-27
-
-Comfortability: Extremely
-
-===========================
-File name: Loops.java
-===========================
-
 import java.util.Scanner;
 
 public class Loops {

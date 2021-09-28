@@ -1,14 +1,3 @@
-Fang Chen
-APCS
-HW05 -- Summer Assignment: 05 Value Methods
-2021-09-27
-
-Comfortability: Extremely
-
-===========================
-File name: Methods.java
-===========================
-
 public class Methods {
 
     public static void main(String[] args) {

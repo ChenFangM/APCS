@@ -3,6 +3,8 @@ APCS
 HW05 -- Summer Assignment: 03 Void Methods
 2021-09-27
 
+Comfortability: Extremely
+
 Exercise:
 
 public static void zoop() {

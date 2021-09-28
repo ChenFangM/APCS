@@ -1,14 +1,3 @@
-Fang Chen
-APCS
-HW05 -- Summer Assignment: 07 Arrays
-2021-09-27
-
-Comfortability: Well
-
-===========================
-File name: Arrays.java
-===========================
-
 import java.util.Random;
 
 public class Arrays {

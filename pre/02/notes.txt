@@ -3,6 +3,8 @@ APCS
 HW05 -- Summer Assignment: 02 Data Types
 2021-09-27
 
+Comfortability: Extremely
+
 ===========================
 File name: Date.java
 ===========================
