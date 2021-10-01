@@ -1,0 +1,120 @@
+Fang Chen
+APCS
+HW05 -- Summer Assignment: 08 Extra Problems
+2021-09-27
+
+Overall, the CodingBat challenges were pretty simple to me. 
+I feel comfortable with using java to solve the extra problems given.
+
+=================
+force
+=================
+
+public double force(double g, double m1, double m2, double r){
+  return g * m1 * m2 / (r * r);
+}
+
+=================
+average3
+=================
+
+public double average3(int a, int b, int c){
+  return ((double) a + b + c) /3;
+}
+
+=================
+sumOfSines
+=================
+
+public double sumOfSines(double t){
+   double r = (t/180) * Math.PI;
+   double Sum = Math.round((Math.sin(2 * r) + Math.sin(3 * r)) * 1000) / 1000.0;
+   return Sum;  
+}
+
+=================
+oddsAreNegated
+=================
+
+public int oddsAreNegated(int x){
+  if (x % 2 == 0) {
+    return (x);
+  } else {
+    return 0-x;
+  }
+}
+
+=================
+noTeenSum
+=================
+
+public int noTeenSum(int a, int b, int c) {
+  return fixTeen(a) + fixTeen(b) + fixTeen(c);
+}
+
+public int fixTeen(int n) {
+  if (n != 15 && n != 16 && n >= 13 && n <= 19) {
+    return 0;
+  }
+  return n;
+}
+
+=================
+stringTimes
+=================
+
+public String stringTimes(String str, int n) {
+  String copies = "";
+  while (n != 0) {
+    copies += str;
+    n = n - 1;
+  }
+  return copies;
+}
+
+=================
+countEvens
+=================
+
+public int countEvens(int[] nums) {
+  int numberOfEvens = 0;
+  for (int num : nums) {
+    if (num % 2 == 0) {
+      numberOfEvens ++;
+    } 
+  }
+  return numberOfEvens;
+}
+
+=================
+sum28
+=================
+
+public boolean sum28(int[] nums) {
+  int sumOf2 = 0;
+  for (int num : nums) {
+    if (num == 2) {
+      sumOf2 += 2;
+    }
+  }
+  if (sumOf2 == 8) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+=================
+scoresIncreasing
+=================
+
+public boolean scoresIncreasing(int[] scores) {
+  boolean isIncreasing = true;
+  for (int index = 1; index < scores.length; index ++) {
+    if (scores[index] < scores[index - 1]) {
+      isIncreasing = false;
+      break;
+    }
+  }
+  return isIncreasing;
+}
