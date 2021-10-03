@@ -5,8 +5,6 @@ HW09 -- Using BigSib class in Greet class
 2021-10-01
 */
 
-import bigsibs.BigSib;
-
 public class Greet {
 
     public static void main(String [] args) {

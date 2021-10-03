@@ -1,5 +1,3 @@
-package bigsibs;
-
 public class BigSib {
 
 	public static void main(String[] args) {
