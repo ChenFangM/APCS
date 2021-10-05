@@ -1,9 +1,9 @@
 public class Greet {
 
     public static void main(String [] args) {
-        BigSib.greet("Mr. Mykolyk");
-	BigSib.greet("Nada");
-	BigSib.greet("Brianna");
+        BigSib.greet("Flim");
+	BigSib.greet("Flam");
+	BigSib.greet("Kazaam");
     }
     
 }
