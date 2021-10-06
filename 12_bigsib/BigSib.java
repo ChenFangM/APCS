@@ -22,9 +22,13 @@ public class BigSib {
 
 /*
 DISCOVERIES
-- Too much
+The class BigSib is a blueprint for instances that are defined by "BigSib instanceName = new BigSib();" 
+The instance created, instanceName, will have the attribute String helloMsg and now the methods in class BigSib can be used with a dot operator.
+An important thing to note is that the methods do not have the keyword static so that it can be used with instances.
+When the code runs, instanceName.setHelloMsg() will set helloMsg to the string input.
+And instanceName.greet() will return a string that combines helloMsg and the name which is the string input. 
+Once the method greet returns a string, the main method of the class greet will print the entire greeting.
 
 QCC
-- Everything you didn't teach
-
+- What else could you do with instances?
 */

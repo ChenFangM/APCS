@@ -6,10 +6,10 @@ public class Greet {
 
 		//
 
-		BigSib freshman = new BigSib();
-		freshman.setHelloMsg("Word up");
+		BigSib richard = new BigSib();
+		richard.setHelloMsg("Word up");
 		
-		greeting = freshman.greet("freshman");
+		greeting = richard.greet("freshman");
 		System.out.println(greeting);
 
 		//
