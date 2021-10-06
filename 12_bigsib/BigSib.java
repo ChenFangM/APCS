@@ -14,7 +14,7 @@ public class BigSib {
 	}
 
 	public String greet(String name) {
-		String greeting = helloMsg + " " + name + "\n" + "Salutations Dr.Spaceman" + "\n" + "Hey ya Kong Fooey" + "\n" + "Sup mom";
+		String greeting = helloMsg + " " + name;
 		return greeting;
 	}
 
