@@ -1,5 +1,5 @@
 /* 
-"Shoulder Buddies" {Fang, William, and Duckies Cat and CS5ODDB}
+"Shoulder Buddies" {Fang, William, and the Duckies Cat and CS5ODDB}
 APCS
 HW 13 -- Where do BigSibs Come From?
 2021-10-07
