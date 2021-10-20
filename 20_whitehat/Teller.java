@@ -4,6 +4,17 @@ APCS
 HW20 - External Audit
 2021-10-19
 */
+
+/*
+DISCO
+0: The withdraw() method is without any specific bounds and allows you to withdraw more than you have, giving the user a negative bank balance instead of printing an error.
+1: The written checkAuth() method takes the pin and account password instead of the account number and password.
+
+QCC
+0: Is there a method to test BankAccount.java from the terminal rather than using the main method? 
+1: How do we write a loop function which would enable us to test numerous values of the instance variables at once?
+*/
+
 public class Teller {
 
   public static void main(String[] args) {
@@ -36,13 +47,3 @@ public class Teller {
     System.out.println(ba.checkAuth("UnsecurePassw0rd"));
    }
 }
-
-/*
-DISCO
-0: The withdraw() method is without any specific bounds and allows you to withdraw more than you have, giving the user a negative bank balance instead of printing an error.
-1: The written checkAuth() method takes the pin and account password instead of the account number and password.
-
-QCC
-0: Is there a method to test BankAccount.java from the terminal rather than using the main method? 
-1: How do we write a loop function which would enable us to test numerous values of the instance variables at once?
-*/
