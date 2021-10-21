@@ -38,18 +38,16 @@ public class Stats {
 }
 
   public static int geoMean(int a, int b) {
-    double frac = (double) 1/2;
     int product = a * b;
-    double meanD = Math.pow(product, frac); 
+    double meanD = Math.pow(product, 1.0/2); 
     long meanL = Math.round(meanD);
     int meanI = Math.round(meanL);
     return meanI;
   }
 
   public static double geoMean(double a, double b) {
-    double frac = (double) 1/2;
     double product = a * b;
-    return Math.pow(product, frac);
+    return Math.pow(product, 1.0/2);
   }
 
   public static int max(int a, int b, int c) {
@@ -77,18 +75,16 @@ public class Stats {
   }
 
   public static int geoMean(int a, int b, int c) {
-    double frac = (double) 1/3;
     int product = a * b * c;
-    double meanD = Math.pow(product, frac); 
+    double meanD = Math.pow(product, 1.0/3); 
     long meanL = Math.round(meanD);
     int meanI = Math.round(meanL);
     return meanI;
   }
 
   public static double geoMean(double a, double b, double c) {
-    double frac = (double) 1/3;
     double product = a * b * c;
-    return Math.pow(product, frac);
+    return Math.pow(product, 1.0/3);
   }
 
   //main method for testing functionality
