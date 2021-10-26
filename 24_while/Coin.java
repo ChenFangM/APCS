@@ -2,7 +2,7 @@
 // APCS
 // HW24 -- Get It While You Can
 // 2021-10-26
-// time spent: 
+// time spent: 0.7 hr
 
 public class Coin {
 
