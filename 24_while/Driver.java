@@ -28,7 +28,6 @@ public class Driver {
     System.out.println("Flip until you have 3500 heads: \n");
     System.out.println(montaUK.summary());
 
-
     // Flip until y matches have occurred
     int yMatches = 3500;
     while (duck.getFlipCtr() < 3500) {
