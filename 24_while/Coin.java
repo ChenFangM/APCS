@@ -4,6 +4,14 @@
 // 2021-10-26
 // time spent: 0.7 hr
 
+/*
+POST-V0 MODS
+- Modified the contructors to use this() to refer to the default constructor or other overloaded constructors
+- Added reset("heads", 0.5) to Coin() and assignValue(s) to Coin(String s)
+- Concised equals() by removing an unnecessary conditional
+- Added summary() for easy testing in Driver.java
+*/
+
 public class Coin {
 
   //attributes aka instance vars
