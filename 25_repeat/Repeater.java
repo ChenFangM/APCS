@@ -50,17 +50,17 @@ public class Repeater {
 	}
 
 
-  public static void main(String[] args) {
-    
-    //test fenceW
-    System.out.println(fenceW(1));
-    System.out.println(fenceW(2));
-    System.out.println(fenceW(3));
-    //test fenceR
-    System.out.println(fenceR(1));
-    System.out.println(fenceR(2));
-    System.out.println(fenceR(3));
+	public static void main(String[] args) {
 
-  }
+	//test fenceW
+	System.out.println(fenceW(1));
+	System.out.println(fenceW(2));
+	System.out.println(fenceW(3));
+	//test fenceR
+	System.out.println(fenceR(1));
+	System.out.println(fenceR(2));
+	System.out.println(fenceR(3));
+
+	}
 
 }
