@@ -131,8 +131,7 @@ public class Stats {
 		while (a != b) {
 			if (a > b) {
 				a = a - b;
-			}
-			if (a < b) {
+			} else {
 				b = b - a;
 			}
 		}
