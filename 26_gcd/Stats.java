@@ -3,7 +3,7 @@ Team ___ {Fang, Sophia, and duckies}
 APCS
 HW26 -- GCD Three Ways
 2021-10-28
-time spent: 
+time spent: 0.8 hr
 */
 
 /*
@@ -131,8 +131,7 @@ public class Stats {
 		while (a != b) {
 			if (a > b) {
 				a = a - b;
-			}
-			if (a < b) {
+			} else {
 				b = b - a;
 			}
 		}
