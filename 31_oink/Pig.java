@@ -1,5 +1,5 @@
 /***
- * Team Hollister 
+ * Team Hollister {Fang, Cat, Brianna, Pepe, Nicole, Duck}
  * APCS
  * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
  * 2021-11-04
@@ -27,7 +27,7 @@ DISCOVERIES
 0: By adding "AEIOU" to the "aeiou" string, the code will be able to also recognize capital-case letters.
 
 QCC
-0: How do we utilize the coding skills from this assignment to analyze, say a larger piece of test.
+0: How do we utilize the coding skills from this assignment to analyze, say a larger piece of test?
 */
 
 public class Pig
@@ -58,7 +58,7 @@ public class Pig
       return VOWELS.indexOf(letter) > -1;
     }
     return false;
-  } //emd isAVowel()
+  } //end isAVowel()
 
 
   /*=====================================
@@ -75,7 +75,7 @@ public class Pig
       }
     }
     return numOfVowels;
-  }
+  } //end countVowels()
 
 
   /*=====================================
@@ -87,7 +87,7 @@ public class Pig
   public static boolean hasAVowel( String w ) 
   {
     return countVowels(w) > 0;
-  }
+  } //end hasAVowel()
 
 
   /*=====================================
@@ -104,7 +104,7 @@ public class Pig
       }
     }
     return pigLatin;
-  }
+  } //end allVowels()
 
 
   public static void main( String[] args ) 
@@ -145,6 +145,6 @@ public class Pig
       allVowels("")
     );
 
-  }//end main()
+  } //end main()
 
-}//end class Pig
+} //end class Pig
