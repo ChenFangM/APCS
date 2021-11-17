@@ -1,12 +1,28 @@
 /*****************************************************
- * TNPG Four
- * APCS pd00
+ * TNPG: Four {Fang Chen, Kaitlin Ho, Jing yi Feng}
+ * APCS pd06
  * HW38 -- Shmoney
  * 2021-11-18
- *
- * class Slots
- * skeleton
+ * time spent: 0.7 hr
  *****************************************************/
+
+/*
+  DISCO
+  00: If you declare a non-static object inside the default constructor with the 
+      same name as a non-static object declared above the default constructor, it will 
+      create a new object and the original object will be given the value null. So when 
+      you try to call the object in any non-static method, the terminal will return a
+      NullPointerException.
+  01: By using Math.floor() with Math.random() as in Math.floor(Math.random() * int a),
+      you are returned a double value between [0, a).
+
+  QCC
+  00: Is there another way to swap elements in an array without first storing the value
+      in a separate variable?
+  01: Why is it in any way significant to allocate memory for _fruits (simply setting
+      _fruits to FRUITS without allocating memory doesn't seem to return any errors)?
+
+*/
 
 public class Slots {
 
@@ -15,15 +31,10 @@ public class Slots {
     "lime", "lime", "lime",
     "lemon", "lemon", "lemon",
     "cherry", "cherry", "cherry",
-    /*
-      add extra fruits until your heart is content...
-      Some suggestions:
     "orange", "orange", "orange",
-    "grapefruit", "grapefruit", "grapefruit",
-    "tangerine", "tangerine", "tangerine",
-    "ugli", "ugli", "ugli",
-    */
-    "peach", "peach", "peach"
+    "apple", "apple", "apple",
+    "peach", "peach", "peach",
+    "tomato", "tomato", "tomato"
   };
 
   private String[] _fruits; //to be init'd by each instance
@@ -37,10 +48,10 @@ public class Slots {
   public Slots()
   {
     //allocate memory for _fruits based on size of FRUITS:
-
+    _fruits = new String[FRUITS.length];
 
     //copy elements of FRUITS into _fruits:
-
+    _fruits = FRUITS;
   }
 
 
@@ -51,7 +62,10 @@ public class Slots {
     =====================================*/
   public String toString()
   {
-    String fruits = _fruits[0] + _fruits[1] + _fruits[2];
+    String fruits = "";
+    fruits += _fruits[0] + "\t"; 
+    fruits += _fruits[1] + "\t";
+    fruits += _fruits[2];
     return fruits;
   }
 
@@ -80,8 +94,11 @@ public class Slots {
     // A simple approach to shuffling:
     // iterate through the array, swapping
     // the val at each index with a randomly chosen other index
-    for(  )
-      swap(  );
+    int swapper = -1;
+    for(int i = 0; i < _fruits.length; i++) {
+      swapper = (int) Math.floor(Math.random() * _fruits.length);
+      swap(i, swapper);
+    }
   }
 
 
@@ -94,8 +111,9 @@ public class Slots {
   public boolean jackpot()
   {
     boolean retBoo = false;
-
-
+    if (_fruits[0].equals(_fruits[1]) && _fruits[1].equals(_fruits[2])) {
+      retBoo = true;
+    }
     return retBoo;
   }
 
@@ -109,9 +127,13 @@ public class Slots {
     =====================================*/
   public boolean miniWin()
   {
-    boolean retBoo = ?
-
-
+    boolean retBoo = false;
+    boolean endsEqual = _fruits[0].equals(_fruits[2]);
+    boolean firstTwoEqual = _fruits[0].equals(_fruits[1]);
+    boolean lastTwoEqual = _fruits[1].equals(_fruits[2]);
+    if (!(endsEqual || firstTwoEqual || lastTwoEqual)) {
+      retBoo = true;
+    }
     return retBoo;
   }
 
@@ -120,7 +142,6 @@ public class Slots {
   public static void main( String[] args ) {
     //usage: move bar below down 1 line at a time to test functionality...
 
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     Slots machine01 = new Slots();
     Slots machine02 = new Slots();
     //test to verify slot machines function indepently
@@ -156,7 +177,6 @@ public class Slots {
     System.out.println( "====================================" );
     System.out.println( "Your spin..." + "\t" + machine01 );
     System.out.println( "JACKPOT!\n" );
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main
 
 }//end class Slots
