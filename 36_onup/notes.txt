@@ -1,0 +1,58 @@
+Fang Chen
+APCS
+HW36 -- All Quacked Up
+2021-11-19
+time spent: 0.7 hr 
+
+Think Java | Appendix D [Debugging]
+
+Types of Errors
+- Compile-time error: Syntax error
+- Run-time error: Error occurring while the program is running
+	- Ex: StackOverflowError
+- Logic errors: Error where the program does the wrong thing
+
+Debugging Compile-time Errors
+- Avoid the mistake to begin with
+	- Indent and format neatly
+- Case: The compiler reports numerous errors
+	- Often errors are consequences of previous errors, so you should begin by fixing just the first error
+	- Double check for syntax (e.g. semicolons)
+- Error messages give the location where the compiler notices a problem
+	- While this might not necessarily be where the error is, begin by searching for the error there
+- Finding common syntax errors
+	- Check proper balance and nesting of parentheses and brackets
+	- Code is case sensitive!
+	- Check for semicolon placements
+	- Strings have matching quotation marks
+		- Double quote for strings
+		- Single quote for characters
+	- Check data types for each assignment statement
+	- Check for order of arguments and their types in method invocations
+	- Check for correct method return types
+	- Static and not static contexts
+- Make sure you're compiling the correct file
+
+Debugging Run-time Errors
+- Program "hanging"
+	- Oftentime an infinite loop
+	- StackOverflowError indicates an infinite recursion
+- Trace your code's flow of execution
+	- Try adding print statements that indicate when a loop is starting and ending so that you can identify if the problem is that the loop never ends.
+- Exceptions
+	- Find the name of the exception, line of occurance and stack trace
+		- NullPointerException: Tries to access or invoke a method on a null object
+		- ArrayIndexOutOfBoundsException: Tries to access an item located in an index that doesn't exist in the array
+		- StackOverflowError
+		- FileNotFoundException
+		- ArithmeticException: Error during an arithmetic operation (e.g. division by 0)
+
+Debugging Logic Errors
+- Establish that the behavior of the code is not as intended
+- Test components separately
+- Add comments in the code to help yourself
+- Case: print() doesn't print anything in the terminal
+	- Your last print statement should be println() because the print() method stores the output until the next newline
+- Take a break!
+- Get another pair of eyes to help!
+- Explain the problem to your ducky!
