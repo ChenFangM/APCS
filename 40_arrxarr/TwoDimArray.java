@@ -50,7 +50,7 @@ public class TwoDimArray
   {
     int sum = 0;
     for (int i = 0; i < m.length; i++) {
-      sum += sumRow(i, m);
+      sum += sumRow2(i, m);
     }
     return sum;
   }
@@ -68,15 +68,17 @@ public class TwoDimArray
   }
 
 
-  // //postcond: returns sum of all items on row r of 2D int array a
-  // //          uses a FOREACH loop
-  // public static int sumRow2(int r, int[][] m)
-  // {
-  //   // *** YOUR IMPLEMENTATION HERE ***
-  //   int summer = 0;
-  //   return summer;
-  // }
-  //
+  //postcond: returns sum of all items on row r of 2D int array a
+  //          uses a FOREACH loop
+  public static int sumRow2(int r, int[][] m)
+  {
+    int summer = 0;
+    for (int num: m[r]) {
+      summer += num;
+    }
+    return summer;
+  }
+
 
   public static void main( String [] args )
   {
