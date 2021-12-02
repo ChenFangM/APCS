@@ -3,6 +3,16 @@
 // HW40 -- 2D arrays
 // 2021-11-30
 
+/*
+DISCO:
+- Foreach loops are very handy for printing arrays in arrays (2D arrays)
+
+QCC:
+- What do 3D arrays look like? Would it be an array in an array in an array? Or something different?
+- Would the process for printing and summing 3D arrays be similar to those for 1D and 2D arrays?
+- Can a 2D array have certain indexes null? For example: a[1][2] is 2 but a[1][3] is null. (Most likely)
+*/
+
 public class TwoDimArray
 {
   //postcond: prints each row of 2D int array a on its own line
