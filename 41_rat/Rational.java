@@ -5,8 +5,11 @@
 
 /*
 DISCO
+- By using instance variables p and q instead of storing the double value of the Rational in a single variable makes mathematical operations a lot neater and more precise.
 
 QCC
+- How can we make a function that simplifies the fraction present when using this class?
+- Why would making multiply() and divide() void work better than having the functions return another Rational instance?
 */
 
 public class Rational {
