@@ -74,7 +74,6 @@ public class Rational {
 		// Ensure s did not change
 		System.out.println(s.toString()); // "1/2"
 
-
 	}
 
 }
