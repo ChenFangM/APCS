@@ -52,48 +52,54 @@ public class Rational {
 		q = this.q * a.p;
 	}
 
-  public void reduce(){
-    int greatestCom = gcd(p, q);
-    p = p / greatestCom;
-    q = q / greatestCom;
-  }
+	public void reduce(){
+		int greatestCom = this.gcd();
+		p = p / greatestCom;
+		q = q / greatestCom;
+	}
 
-  public int gcd(int a, int b){
-   int gcd = 1;
-        for (int i = 1; i <= Math.min(a, b); i++) {
-            if ((a % i == 0) & (b % i == 0)) {
-                gcd = i;
-            }
-        }
-   return gcd;
-  }
+	// HW 42 Modifications
 
-  public void add(Rational a){
-     int leastCom = lcm(this.q, a.q);
-     p = (leastCom/q)*this.p + (leastCom/a.q)*a.p;
-     q = leastCom;
-     this.reduce();
-  }
+	public static int gcd(int a, int b){
+		int gcd = 1;
+		    for (int i = 1; i <= Math.min(a, b); i++) {
+		        if ((a % i == 0) & (b % i == 0)) {
+		            gcd = i;
+		        }
+		    }
+		return gcd;
+	}
 
-  public void subtract(Rational a){
-     int leastCom = lcm(this.q, a.q);
-     p = ((leastCom / this.q) * this.p) - ((leastCom / a.q) * a.p);
-     q = leastCom;
-     this.reduce();
-  }
-	
-  public int lcm(int a, int b){
-     int result;
-     result = a * (b / gcd(a, b));
-     return result;
-  }
+	public int gcd() {
+		return gcd(p, q);
+	}
 
-  public int compareTo(Rational a){
-     a.reduce();
-     this.reduce();
-     this.subtract(a);
-     return this.p;
-  }
+	public static int lcm(int a, int b){
+		int result;
+		result = a * (b / gcd(a, b));
+		return result;
+	}
+
+	public void add(Rational a){
+		int leastCom = lcm(this.q, a.q);
+		p = (leastCom/q)*this.p + (leastCom/a.q)*a.p;
+		q = leastCom;
+		this.reduce();
+	}
+
+	public void subtract(Rational a){
+		int leastCom = lcm(this.q, a.q);
+		p = ((leastCom / this.q) * this.p) - ((leastCom / a.q) * a.p);
+		q = leastCom;
+		this.reduce();
+	}
+
+	public int compareTo(Rational a){
+		a.reduce();
+		this.reduce();
+		this.subtract(a);
+		return this.p;
+	}
 
 	public static void main(String[] args) {
 		Rational r = new Rational(2,3);
