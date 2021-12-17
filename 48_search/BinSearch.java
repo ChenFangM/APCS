@@ -14,6 +14,7 @@
   * Since a is a Comparable[], each element of a is a Comparable, and thus a[m].compareTo(target) compiles and runs
   QCC
   * Is there any difference in efficiency between a recursive and iterative version of binary search?
+  * What are the advantages of being returned an index of an occurrence of the target that doesn't necessarily have to the the first or last occurrence of the target?
 **/
 
 public class BinSearch

@@ -22,9 +22,13 @@ public class LinSearch
     int i = 0;
 
     while ( i < a.length ) {
-
-      
+      if (a[i].compareTo(target) == 0) {
+        tPos = i;
+        break;
+      }
+      i = i + 1;
     }
+
     return tPos;
   }
 
@@ -47,7 +51,6 @@ public class LinSearch
   //minimal -- augment as necessary
   public static void main ( String[] args )
   {
-    /*----------------------------------------------------
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     System.out.println("\nNow testing linSearch on int array...");
@@ -59,10 +62,10 @@ public class LinSearch
     printArray( iArr );
 
     //search for 6 in array 
-    System.out.println( linSearch(iArr,6) );
+    System.out.println( linSearch(iArr,6) ); // should be 2 (or 4) // printed 2
 
     //search for 43 in array 
-    System.out.println( linSearch(iArr,43) );
+    System.out.println( linSearch(iArr,43) ); // should be -1 // printed -1
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -78,13 +81,11 @@ public class LinSearch
     printArray( sArr );
 
     //search for "watermelon" in array
-    System.out.println( linSearch(sArr,"watermelon") );
+    System.out.println( linSearch(sArr,"watermelon") ); // should be 1 (or 5) // printed 1
 
     //search for "lychee" in array
-    System.out.println( linSearch(sArr,"lychee") );
+    System.out.println( linSearch(sArr,"lychee") ); // should be -1 //printed -1
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      ----------------------------------------------------*/
 
   }//end main()
 
