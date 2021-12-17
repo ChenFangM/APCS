@@ -8,6 +8,14 @@
    Binary search on array of Comparables
 **/
 
+/**
+  Disco
+  * The built-in object Comparable allow the usage of compareTo() and is used in the Integer Wrapper class
+  * Since a is a Comparable[], each element of a is a Comparable, and thus a[m].compareTo(target) compiles and runs
+  QCC
+  * Is there any difference in efficiency between a recursive and iterative version of binary search?
+**/
+
 public class BinSearch
 {
 
@@ -21,7 +29,7 @@ public class BinSearch
   {
     //uncomment exactly 1 of the 2 stmts below:
 
-    return binSearchIter( a, target, 0, a.length-1 );
+    return binSearchIter( a, target, 0, a.length-1 ); // passed tests
     // return binSearchRec( a, target, 0, a.length-1 ); // passed tests
   }
 
