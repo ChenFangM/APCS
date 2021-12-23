@@ -1,20 +1,20 @@
 // Team Four {Fang, Kaitlin, Jing}
 // APCS PD06
-// HW42 -- Be More Rational
-// 2021-12-05
-// time spent: 0.7
+// HW49 -- Rational Standards Compliance
+// 2021-12-22
+// time spent: 1
 
 /*
-DISCO
-- Using LCM for the add and subtract functions makes it alot easier.
-- LCM can be found by taking the GCD of two numbers, dividing one by the result, and then multiplying it by the other
+DISCO:
+- Typecast was needed even after checking if Object was a Rational because even if the boolean returned was TRUE, java still sees the class as object and not rational. 
+	We can typecast without fear because the typecast will only run if Object is an instance of class Rational
 
-QCC
-- If you create an instance of Rational in another class, can methods still access the private variables p and q?
+QCC:
+- Why can't compareTo be modified and used instead of using the equals method?
 
 */
 
-public class Rational {
+public class Rational implements Comparable{
 
 	private int p;
 	private int q;
@@ -94,32 +94,28 @@ public class Rational {
 		this.reduce();
 	}
 
-	public int compareTo(Rational a){
-		a.reduce();
-		this.reduce();
-		this.subtract(a);
-		return this.p;
+	// public int compareTo(Rational a){
+	// 	a.reduce();
+	// 	this.reduce();
+	// 	this.subtract(a);
+	// 	return this.p;
+	// }
+
+	// HW 49 Modifications
+
+	public int compareTo(Object a) {
+		((Rational) a).reduce();
+		((Rational) this).reduce();
+		((Rational) this).subtract((Rational) a);
+		return ((Rational) this).p;
 	}
+
 
 	public boolean equals(Object other) {
 		if (other instanceof Rational) {
-			return (this.compareTo((Rational) other) == 0);
+			return (this.compareTo( other) == 0);
 		}
 		return false;
-	}
-
-	public static void main(String[] args) {
-		Rational r = new Rational(2,3);
-		Rational t = new Rational(4,6);
-		Rational s = new Rational(1,2);
-		Object notRat = new Object();
-
-		System.out.println(r.equals(r)); // should be true
-		System.out.println(r.equals(t)); // should be true
-		System.out.println(r.equals(s)); // should be false
-		System.out.println(r.equals(notRat)); // should be false
-
-
 	}
 
 }
