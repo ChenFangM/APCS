@@ -6,7 +6,7 @@
 
 /*
 DISCO:
-- Typecast was needed even after checking if Object was a Rational because even if the boolean returned was TRUE, java still sees the class as object and not rational. 
+- Typecast was needed even after checking if Object was a Rational because even if the boolean returned was TRUE, java still sees the class as object and not rational.
 	We can typecast without fear because the typecast will only run if Object is an instance of class Rational
 
 QCC:
@@ -94,20 +94,19 @@ public class Rational implements Comparable{
 		this.reduce();
 	}
 
-	// public int compareTo(Rational a){
-	// 	a.reduce();
-	// 	this.reduce();
-	// 	this.subtract(a);
-	// 	return this.p;
-	// }
-
 	// HW 49 Modifications
 
-	public int compareTo(Object a) {
-		((Rational) a).reduce();
-		((Rational) this).reduce();
-		((Rational) this).subtract((Rational) a);
-		return ((Rational) this).p;
+	public int compareTo(Object other) {
+		if (!(other instanceof Rational)) {
+			throw new ClassCastException("\nThat's not a Rational");
+		}
+
+		int thisNum, otherNum;
+		thisNum = this.p * ((Rational) other).q;
+		otherNum = ((Rational) other).p * this.q;
+
+		return thisNum - otherNum;
+
 	}
 
 
