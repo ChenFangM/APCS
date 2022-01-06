@@ -8,20 +8,26 @@
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
- * 
+ * 0: Use the "partition" to create sorted and unsorted areas of the array.
+   1: Expand the partition by one element at a time.
+   2: Compare the element at the index of the partition with the preceding ones,
+      swapping as necessary.
+   3: Repeat steps 1-2 until the array is fully sorted.
  * DISCO
- *
+ * 0: We can understand InsertionSort not only through Thinkeren being sorted by
+     	height, but also through Romanian folk dance.
  * QCC
  * q0: How many passes to sort n elements?
- * a0: 
+ * a0: n-1 passes
  * q1: What do you know after pass p?
- * a1: 
+ * a1: We know that all elements of indices p-1 and less are correctly sorted.
  * q2: How will you know when sorted?
- * a2:
+ * a2: The array is sorted once the partition reaches the end of the array.
  * q3: What constitues a pass?
- * a3:
+ * a3: A pass is defined by the movement of a partition by one element to the
+       right and the elements before the partition being correctly sorted.
  * q4: What must you track?
- * a4: 
+ * a4: We must track the movement of the partition.
  ******************************/
 
 
