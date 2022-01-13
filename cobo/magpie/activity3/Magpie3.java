@@ -1,10 +1,10 @@
 /**
  * A program to carry on conversations with a human user.
- * This version: 
+ * This version:
  * <ul><li>
- *    Uses advanced search for keywords 
- * </li></ul> 
- *    
+ *    Uses advanced search for keywords
+ * </li></ul>
+ *
  * @author Laurie White
  * @version April 2012
  */
@@ -12,7 +12,7 @@ public class Magpie3
 {
 	/**
 	 * Get a default greeting
-	 * 
+	 *
 	 * @return a greeting
 	 */
 	public String getGreeting()
@@ -22,7 +22,7 @@ public class Magpie3
 
 	/**
 	 * Gives a response to a user statement
-	 * 
+	 *
 	 * @param statement
 	 *            the user statement
 	 * @return a response based on the rules given
@@ -45,6 +45,31 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+    		else if (findKeyword(statement, "dog") >= 0
+        			|| findKeyword(statement, "cat") >= 0)
+    		{
+      			response = "Tell me more about your pets.";
+    		}
+    		else if (findKeyword(statement, "Mykolyk") >= 0)
+    		{
+      			response = "He sounds like he has a nice Motorola.";
+    		}
+    		else if (findKeyword(statement, "cheese") >= 0)
+    		{
+      			response = "I love cheese.";
+    		}
+    		else if (findKeyword(statement, "physics") >= 0)
+    		{
+      			response = "Let's not discuss these odd topics.";
+    		}
+    		else if (findKeyword(statement, "boring") >= 0)
+    		{
+      			response = "Let's not discuss these odd topics.";
+    		}
+    		else if (findKeyword(statement, "boring") >= 0)
+    		{
+      			response = "Chatbots have feelings too. </3";
+    		}
 		else
 		{
 			response = getRandomResponse();
@@ -122,7 +147,7 @@ public class Magpie3
 	 * is not a substring of a longer string (so, for
 	 * example, "I know" does not contain "no"). The search
 	 * begins at the beginning of the string.
-	 * 
+	 *
 	 * @param statement
 	 *            the string to search
 	 * @param goal
@@ -137,7 +162,7 @@ public class Magpie3
 
 	/**
 	 * Pick a default response to use if nothing else fits.
-	 * 
+	 *
 	 * @return a non-committal string
 	 */
 	private String getRandomResponse()
@@ -163,6 +188,14 @@ public class Magpie3
 		{
 			response = "You don't say.";
 		}
+    		else if (whichResponse == 4)
+    		{
+      			response = "What else can you share with me?";
+    		}
+    		else if (whichResponse == 5)
+    		{
+      			response = "I see you humans have a lot going on.";
+    		}
 
 		return response;
 	}
