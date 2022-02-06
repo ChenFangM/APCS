@@ -1,0 +1,34 @@
+Butterfingers: Melody Lew, Corina Chen, Fang Min Chen
+APCS pd6
+L05 -- pulling it together
+2022-02-03r
+
+Plan for StatsPrinter.java
+
+===========================================
+ArrayList of frequencies (_frequency)
+===========================================
+
+* Find the max value in given data ArrayList
+* Initialize - Set _frequency to a new Arraylist
+* Size must be the max value in the data + 1
+
+* Use a foreach loop on data AL to populate _frequency
+
+===========================================
+Local Mode (isLocalMode() and getLocalModes())
+===========================================
+
+* Use compareTo
+* Call isLocalMode() in getLocalModes()
+
+===========================================
+Histogram Diagram (printHistogram())
+===========================================
+
+Q: What is the parameter longestBar?
+[Resolved] It tells us the length (# of asterisks) of the longest bar we WANT
+to print in our display of the histogram.
+
+* Divide longestBar by the max value in the frequency ArrayList to get the
+factor we want to multiply to each frequency value
