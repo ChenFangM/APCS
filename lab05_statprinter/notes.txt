@@ -3,11 +3,49 @@ APCS pd6
 L05 -- pulling it together
 2022-02-03r
 
-Plan for StatsPrinter.java
+===========================================
+DISCO
+===========================================
+
+* For a boolean method, we can simply return the boolean value of the condition;
+a conditional statement is not needed.
+* You can have line breaks within a statement and that will not interfere with
+how the code runs.
+* The error message: Recompile with -Xdiags:verbose to get full output appeared
+because we have compareTo() and < and > operators.
 
 ===========================================
-ArrayList of frequencies (_frequency)
+QCC
 ===========================================
+
+* When is it better to use "\n" versus println()?
+* What exactly is longestBar? What does its name symbolize? (Resolved!)
+
+===========================================
+MISC
+===========================================
+
+* Big O Notation of StatPrinter(): O(n)
+This is because the for loops are not nested and both loops are linear. The for
+loops are iterating through the ArrayList once.
+* Big O Notation of max(): O(n)
+There is a linear relationship between the data size and how long it takes to
+iterate through.
+* Big O Notation of isLocalMode(): O(1)
+It does not matter what the input is; the input does not affect how long it
+takes to determine the local mode.
+* Big O Notation of getLocalModes(): O(n)
+The data size and how long it takes to iterate through the data has a linear
+relationship.
+* Big O Notation of printHistogram(): O(n^2)
+Since this method has nested for loops, it takes n^2 times for it to print
+the histogram.
+
+===========================================
+Plan for StatsPrinter.java
+===========================================
+
+ArrayList of frequencies (_frequency):
 
 * Find the max value in given data ArrayList
 * Initialize - Set _frequency to a new Arraylist
@@ -15,16 +53,12 @@ ArrayList of frequencies (_frequency)
 
 * Use a foreach loop on data AL to populate _frequency
 
-===========================================
-Local Mode (isLocalMode() and getLocalModes())
-===========================================
+Local Mode (isLocalMode() and getLocalModes()):
 
 * Use compareTo
 * Call isLocalMode() in getLocalModes()
 
-===========================================
-Histogram Diagram (printHistogram())
-===========================================
+Histogram Diagram (printHistogram()):
 
 Q: What is the parameter longestBar?
 [Resolved] It tells us the length (# of asterisks) of the longest bar we WANT
