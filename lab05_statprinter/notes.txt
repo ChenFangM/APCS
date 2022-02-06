@@ -12,7 +12,7 @@ a conditional statement is not needed.
 * You can have line breaks within a statement and that will not interfere with
 how the code runs.
 * The error message: Recompile with -Xdiags:verbose to get full output appeared
-because we have compareTo() and < and > operators.
+because we have compareTo() and < and > operators in Powershell.
 
 ===========================================
 QCC
