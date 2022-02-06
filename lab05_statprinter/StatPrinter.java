@@ -58,8 +58,8 @@ public class StatPrinter
   public boolean isLocalMode( int i )
   {
     return (i > 0 && i < _frequency.size() - 1
-    && _frequency.get( i - 1 ) < _frequency.get( i )
-    && _frequency.get( i + 1 ) < _frequency.get( i ));
+    && _frequency.get( i - 1 ).compareTo(_frequency.get( i )) < 0
+    && _frequency.get( i + 1 ).compareTo(_frequency.get( i )) < 0);
   } //big O notation: O(1)
 
 
