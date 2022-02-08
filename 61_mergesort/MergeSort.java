@@ -25,6 +25,13 @@ public class MergeSort
   private static int[] merge( int[] a, int[] b )
   {
     int[] c = new int[a.length + b.length];
+    int aind = 0;
+    int bind = 0;
+    while (aind < a.length && bind < b.length) {
+      if (a[aind] < b[bind]) {
+
+      }
+    }
 
     return c;
   }//end merge()
