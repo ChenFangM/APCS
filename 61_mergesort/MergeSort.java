@@ -11,7 +11,19 @@
 
   Summary of Algorithm:
 
-  ***/
+***/
+
+/***
+  DISCO
+  0: merge() can be coded recursively
+
+  QCC
+  0: How can we write merge() iteratively?
+  1: What is the time complexity of this algorithm?
+  1.1: Is this more or less efficient than bubbleSort, selectionSort, and
+      insertionSort?
+
+***/
 
 public class MergeSort
 {
@@ -25,13 +37,37 @@ public class MergeSort
   private static int[] merge( int[] a, int[] b )
   {
     int[] c = new int[a.length + b.length];
-    int aind = 0;
-    int bind = 0;
-    while (aind < a.length && bind < b.length) {
-      if (a[aind] < b[bind]) {
+    int aInd = 0;
+    int bInd = 0;
+    int cInd = 0;
+    int aVal = 0;
+    int bVal = 0;
 
+    while (cInd < c.length) { // while c not populated
+
+      if (aInd == a.length) {
+        aVal = b[bInd] + 1; // to make sure comparison with b[bInd] is always >
+      } else {
+        aVal = a[aInd];
       }
-    }
+
+      if (bInd == b.length) {
+        bVal = a[aInd] + 1; // to make sure comparison with a[aInd] is always >
+      } else {
+        bVal = b[bInd];
+      }
+
+      if (aVal < bVal) {
+        c[cInd] = aVal;
+        aInd ++;
+        cInd ++;
+      } else {
+        c[cInd] = bVal;
+        bInd ++;
+        cInd++;
+      }
+
+    } // ending while
 
     return c;
   }//end merge()
@@ -44,17 +80,31 @@ public class MergeSort
    ******************************************************/
   public static int[] sort( int[] arr )
   {
-    int[] sorted = new int[arr.length];
+    int[] arr1 = new int[arr.length / 2];
+    int[] arr2 = new int[arr.length - arr1.length];
 
-    return sorted;
+    if (arr.length == 1) {
+      return arr;
+    }
+
+    for (int i = 0; i < arr1.length; i ++) {
+      arr1[i] = arr[i];
+    }
+    arr1 = sort(arr1);
+
+    for (int i = 0; i < arr2.length; i ++) {
+      arr2[i] = arr[i + arr1.length];
+    }
+    arr2 = sort(arr2);
+
+
+    return merge(arr1, arr2);
   }//end sort()
 
 
 
   //-------------------HELPERS-------------------------
   //tester function for exploring how arrays ploring how arrays are passed
-  //usage: print array, mess(array), print array. Whaddayasee?
-  public static void mess( int[] a ) {are passed
   //usage: print array, mess(array), print array. Whaddayasee?
   public static void mess( int[] a ) {
     for( int i = 0 ; i<a.length; i++ )
@@ -88,7 +138,6 @@ public class MergeSort
       mess(arr3);
       printArray( arr3 );
 
-      /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       System.out.println("\nMerging arr1 and arr0: ");
       printArray( merge(arr1,arr0) );
 
@@ -100,6 +149,7 @@ public class MergeSort
       printArray( sort( arr5 ) );
       printArray( sort( arr6 ) );
       printArray( sort( arr7 ) );
+      /*~~~~~~~~~~~~~~ Ye Olde Tester Bar ~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
