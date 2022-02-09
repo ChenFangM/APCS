@@ -10,6 +10,12 @@
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
+  Given an array, split the array into two arrays.
+  Until all the sub-arrays have a length of 1...
+    For each of the sub-arrays, (recursively call the method again) split them
+    into two arrays as well
+  Merge the subarrays from the previeous recursions until the original array
+  is returned sorted.
 
 ***/
 
