@@ -1,0 +1,14 @@
+Fang Chen
+apcs pd06
+lab 010 -- review
+2022-02-11
+
+==================
+Activity 1
+==================
+
+Q1
+a. public static double sentimentVal()
+b. Yes, it requires a String. If you pass a different type of parameter, the
+terminal outputs and error message saying incompatible types.
+c. Yes, it returns a double.
