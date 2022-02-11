@@ -18,20 +18,57 @@ public class Review {
   private static final String SPACE = " ";
 
 
-  //===== Main for Testing =====//
+  //===== Edited for Lab =====//
 
-  public static void main(String[] args) {
-    // A1Q2
-    System.out.println(sentimentVal("why") + "\n" +
-                      sentimentVal("did I") + "\n" +
-                      sentimentVal("overthink"));
-    // A1Q3
-    double num = sentimentVal("warm");
-    String word = sentimentVal(0.5);
-    double x = sentimentVal("good", "bad");
+  public static void main(String[] args) { // main for testing
+    // // A1Q2
+    // System.out.println(sentimentVal("why") + "\n" +
+    //                   sentimentVal("did I") + "\n" +
+    //                   sentimentVal("overthink"));
+    // // A1Q3
+    // double num = sentimentVal("warm");
+    // String word = sentimentVal(0.5);
+    // double x = sentimentVal("good", "bad");
+
+    // A2Q2
+    System.out.println(totalSentiment("SimpleReview.txt"));
+    // A2Q3
+    System.out.println(starRating("SimpleReview.txt"));
   }
 
-  //============================//
+  public static double totalSentiment(String fileName) {
+    String text = textToString(fileName);
+    int wordStart = 0;
+    double val = 0.0;
+    for (int i = 0; i < text.length(); i ++) {
+      if (text.substring(i, i + 1).compareTo(SPACE) == 0) {
+        val += sentimentVal(text.substring(wordStart, i));
+        wordStart = i + 1;
+      }
+    }
+    return val;
+  }
+
+  public static int starRating(String fileName) {
+    double totalSentiment = totalSentiment(filename);
+    if (totalSentiment > 15) {
+      return 5;
+    } else
+    if (totalSentiment > 10) {
+      return 4;
+    } else
+    if (totalSentiment > 5) {
+      return 3;
+    } else
+    if (totalSentiment > 0) {
+      return 2;
+    } else
+      return 1;
+  }
+
+
+
+  //==========================//
 
 
   static{
