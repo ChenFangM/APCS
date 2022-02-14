@@ -35,3 +35,69 @@ Activity 2
 
 Q1 & Q2 --
 Edited Review.java; terminal returned 4.109999999999999.
+
+Q4 --
+It iterates through the file, searching for spaces, and once that is found,
+totalSentiments() will classify everything prior to the space as a word and
+find the sentimentVal(). Then, everything from prior to the space would be
+removed, and the function will continue iterating through the rest, summing up
+all the sentiment values. This will continue until nothing is left and the total
+is returned.
+
+Q5 --
+a. Not particularly because the sentiments have to be really high in order to
+return a good rating.
+b. We can multiply total sentiment by some factor or we can check the rating
+against the input word count.
+
+Q6 --
+He should reversed the comparison sign around because in his current code, no
+matter if the total sentiment is 0 or 14, it will always return 4.
+
+==================
+Activity 3
+==================
+
+Q3 --
+The method indexOf() returns the index of a character in a String; substring()
+returns part of a String, beginning from the specified start index up to the
+specified end index. These methods can be used to divide a string into two parts
+by finding the index of the character you want to split at and creating two
+separate substrings. The first substring will have all the characters from the
+first character up until the character at the specified index. The second
+substring will contain the rest of the characters of the original string.
+
+Q5 --
+The difference between calling static methods as opposed to calling non-static
+methods is that for static methods, it can be called without creating an
+instance of Review. On the other hand, an instance of a class has to be created
+to access the non-static method.
+
+Q6 --
+fakeReview() can be modified by using randomPositiveAdj() or randomNegativeAdj()
+to create a (strictly) fake positive review or a (strictly) fake negative
+review.
+
+==================
+Activity 4
+==================
+
+Q1 --
+You want to troll something you really dislike.
+
+Q2 --
+You want to support something you fervently like.
+
+Q3 --
+Instead of a review that might be negative or positive, we can create a solely
+positive one as to avoid randomness.
+
+Q5 --
+Removes first index.
+
+Q6 --
+Not removing it might cause an exception where no sentimentVal is returned.
+
+Q7 --
+Yes, if every chance of negativity is removed and only positive adjectives are
+used.

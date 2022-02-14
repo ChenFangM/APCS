@@ -34,7 +34,12 @@ public class Review {
     System.out.println(totalSentiment("SimpleReview.txt"));
     // A2Q3
     System.out.println(starRating("SimpleReview.txt"));
+
+    // A3
+    System.out.println(fakeReview("SimpleReview.txt"));
   }
+
+  // ACTIVITY 2
 
   public static double totalSentiment(String fileName) {
     String text = textToString(fileName);
@@ -50,7 +55,7 @@ public class Review {
   }
 
   public static int starRating(String fileName) {
-    double totalSentiment = totalSentiment(filename);
+    double totalSentiment = totalSentiment(fileName);
     if (totalSentiment > 15) {
       return 5;
     } else
@@ -66,7 +71,19 @@ public class Review {
       return 1;
   }
 
+  // ACTIVITY 3
 
+  public static String fakeReview(String fileName){
+    String text = textToString(fileName);
+    String newRev = "";
+    while (text.indexOf("*") > -1){
+      String b = text.substring(0,text.indexOf("*"));
+      text = text.substring(text.indexOf("*"));
+      text = text.substring(text.indexOf(" "));
+      newRev += b + randomAdjective();
+    }
+    return newRev + text;
+  }
 
   //==========================//
 
@@ -91,7 +108,7 @@ public class Review {
       Scanner input = new Scanner(new File("positiveAdjectives.txt"));
       while(input.hasNextLine()){
         String temp = input.nextLine().trim();
-        System.out.println(temp);
+        // System.out.println(temp);
         posAdjectives.add(temp);
       }
       input.close();
