@@ -1,6 +1,22 @@
-Butterfingers
+Butterfingers {Corina Chen, Fang Chen, Melody Lew}
 apcs pd06
 lab 06 -- review
 2022-02-14
 
 Summary of Experience:
+
+Throughout this lab, we learned to data processing on .txt files which inputs
+a series of Strings.
+* Activity 1 goes through the basics of "evaluating" Strings by using the
+assigning values of each word in cleanSentiment.csv.
+* Activity 2 introduces the processing of reviews in the form of .txt files, in
+which .txt files are converted to String and processed iteratively.
+* Activity 3 explored the random modification of data in SimpleReview.txt.
+* Activity 4 explored the intended modification of data in SimpleReview.txt.
+* Activity 5 allowed us to freely apply these skills.
+
+From these activities, our understanding of manipulating file inputs with Java
+code is greater. We reviewed methods from the String class such as
+subString() and indexOf(). In addition, we practiced using the try-catch
+functions in Review.java. The lab was overall a great reminder of previously
+learned skills.

@@ -75,12 +75,17 @@ public class Review {
 
   public static String fakeReview(String fileName){
     String text = textToString(fileName);
+    Double sentiment = sentimentVal(text);
     String newRev = "";
     while (text.indexOf("*") > -1){
       String b = text.substring(0,text.indexOf("*"));
       text = text.substring(text.indexOf("*"));
       text = text.substring(text.indexOf(" "));
-      newRev += b + randomAdjective();
+      if (sentiment > 0.0) {
+        newRev += b + randomPositiveAdj();
+      } else {
+        newRev += b + randomNegativeAdj();
+      }
     }
     return newRev + text;
   }
