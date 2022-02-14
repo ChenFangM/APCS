@@ -1,7 +1,8 @@
-Fang Chen
+Butterfingers {Corina Chen, Fang Chen, Melody Lew}
 apcs pd06
 lab 06 -- review
-2022-02-11
+2022-02-14
+time spent: 3 hrs
 
 ==================
 Activity 1
@@ -110,7 +111,7 @@ Compilable and Runnable Program: Activity5.java
 Project based off of Wordle
 
 Q1 --
-I chose to implement this program because it is a simple and fun minigame that
+We chose to implement this program because it is a simple and fun minigame that
 processes user input data (the word) and checks if each letter is in the
 mystery word and if it is in the correct position.
 
@@ -122,9 +123,9 @@ overloaded constructor for the game, play(), isIn(), and displayCheck()).
 Q3 --
 Header: public boolean isIn(String tempLetter) {}
 The chosen parameter is a String, more specifically, the 1-length substring of
-the word that the player guesses. I used this parameter to allow the method to
-compare the letter with letters of the mystery word. I made the method
-non-static because I wanted to call the instance variable _word within the
+the word that the player guesses. We used this parameter to allow the method to
+compare the letter with letters of the mystery word. We made the method
+non-static because we wanted to call the instance variable _word within the
 method.
 
 Q4 --
@@ -136,10 +137,10 @@ if (tempLetter.compareTo(_word.substring(i, i + 1)) == 0) {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The methods of String class being called are compareTo() and substring(). I
+The methods of String class being called are compareTo() and substring(). We
 use compareTo() to compare whether the two Strings (predetermined to be the
-same length) are the same. The method returns an int value, which I convert to
-a boolean expression with the boolean operator ==. I used substring() to take a
+same length) are the same. The method returns an int value, which we convert to
+a boolean expression with the boolean operator ==. We used substring() to take a
 1-length "piece" of the String _word; it returns a String.
 
 Q5 --
@@ -173,7 +174,7 @@ for (int i = 0; i < 5; i ++) {
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-I used a for-loop iteration to set the elements of AL _letters to the five
+We used a for-loop iteration to set the elements of AL _letters to the five
 letters of _word and the all 5 elements of _check[] to "-".
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~ Equivalent ~~~~~~~~~~~~~~~~~~~~~~~~~~
