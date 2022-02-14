@@ -74,16 +74,20 @@ public class Review {
 
   public static String fakeReview(String fileName){
     String text = textToString(fileName);
-    Double sentiment = sentimentVal(text);
     String newRev = "";
-    while (text.indexOf("*") > -1){
-      String b = text.substring(0,text.indexOf("*"));
+    String word = "";
+    while (text.indexOf("*") > -1 && text.indexOf(" ") > -1){
+      String b = text.substring(0, text.indexOf("*"));
       text = text.substring(text.indexOf("*"));
-      text = text.substring(text.indexOf(" "));
-      if (sentiment > 0.0) {
-        newRev += b + randomPositiveAdj();
+      word = text.substring(text.indexOf("*"), text.indexOf(" "));
+      word = removePunctuation(word);
+      newRev += b;
+      if (sentimentVal(word) > 0){
+        newRev = newRev + randomPositiveAdj();
+        text = text.substring(text.indexOf(" "));
       } else {
-        newRev += b + randomNegativeAdj();
+        newRev = newRev + randomNegativeAdj();
+        text = text.substring(text.indexOf(" "));
       }
     }
     return newRev + text;
