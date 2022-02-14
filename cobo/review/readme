@@ -13,7 +13,8 @@ assigning values of each word in cleanSentiment.csv.
 which .txt files are converted to String and processed iteratively.
 * Activity 3 explored the random modification of data in SimpleReview.txt.
 * Activity 4 explored the intended modification of data in SimpleReview.txt.
-* Activity 5 allowed us to freely apply these skills.
+* Activity 5 allowed us to freely apply these skills, which led us to coding a
+simple word game, Wordle. 
 
 From these activities, our understanding of manipulating file inputs with Java
 code is greater. We reviewed methods from the String class such as

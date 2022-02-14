@@ -21,18 +21,17 @@ public class Review {
   //===== Edited for Lab =====//
 
   public static void main(String[] args) { // main for testing
-    // // A1Q2
-    // System.out.println(sentimentVal("why") + "\n" +
-    //                   sentimentVal("did I") + "\n" +
-    //                   sentimentVal("overthink"));
-    // // A1Q3
-    // double num = sentimentVal("warm");
-    // String word = sentimentVal(0.5);
-    // double x = sentimentVal("good", "bad");
+    // A1Q2
+    System.out.println(sentimentVal("why") + "\n" +
+                      sentimentVal("did I") + "\n" +
+                      sentimentVal("overthink"));
+
+    double num = sentimentVal("warm");
+    String word = sentimentVal(0.5);
+    double x = sentimentVal("good", "bad");
 
     // A2Q2
     System.out.println(totalSentiment("SimpleReview.txt"));
-    // A2Q3
     System.out.println(starRating("SimpleReview.txt"));
 
     // A3
