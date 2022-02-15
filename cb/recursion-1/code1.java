@@ -229,17 +229,17 @@ appearances of "pi" have been replaced by "3.14".
 Given a string, compute recursively a new string where all the 'x' chars have
 been removed.
 */
-public String noX(String str) {
+  public String noX(String str) {
 
-  if(str.length() == 0) {
-    return str;
-  }
-  if(str.substring(0,1).compareTo("x") == 0) {
-    return noX(str.substring(1));
-  }
-  return str.substring(0,1) + noX(str.substring(1));
+    if(str.length() == 0) {
+      return str;
+    }
+    if(str.substring(0,1).compareTo("x") == 0) {
+      return noX(str.substring(1));
+    }
+    return str.substring(0,1) + noX(str.substring(1));
 
-}
+  }
 
 
 }
