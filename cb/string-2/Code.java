@@ -37,7 +37,7 @@ public class Code {
 /* double Char
 Given a string, return a string where for every char in the original, there are two chars.
 */
-	
+
 	public static String doubleChar(String str) {
 		String word = "";
 		for (int i = 0; i <= str.length() - 1; i ++) {
@@ -49,7 +49,7 @@ Given a string, return a string where for every char in the original, there are 
 /* countHi
 Return the number of times that the string "hi" appears anywhere in the given string.
 */
-	
+
 	public static int countHi(String str) {
 		int numHi = 0;
 		for (int i = 0; i <= str.length() - 2; i ++) {
@@ -57,7 +57,7 @@ Return the number of times that the string "hi" appears anywhere in the given st
 			if (isHi.equals("hi")) {
 				numHi ++;
 			}
-		} 
+		}
 		return numHi;
 	}
 
@@ -102,7 +102,7 @@ Note: str.toLowerCase() returns the lowercase version of a string.
 */
 
 	public static boolean endOther(String a, String b) {
-  
+
   		String longer = "";
   		String shorter = "";
 		if (a.length() >= b.length()) {
