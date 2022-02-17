@@ -1,0 +1,15 @@
+Butterfingers: Melody Lew, Corina Chen, Fang Chen
+APCS pd 06
+HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+2022-02-17r
+time spent: 1.0 hr
+
+DISCO
+* Recursions can be used to "retract" actions and move forward with another
+option.
+
+QCC
+* How can we code this algorithm iteratively?
+* Is there a way to find and ALL possible combinations of the queen-challenge
+instead of just the first combination that works?
+* What is the time complexity of this algorithm?
