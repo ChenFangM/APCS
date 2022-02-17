@@ -13,3 +13,51 @@ QCC
 * Is there a way to find and ALL possible combinations of the queen-challenge
 instead of just the first combination that works?
 * What is the time complexity of this algorithm?
+
+====================
+RESULTS
+====================
+
+0x0: true
+
+1x1: true
+Q
+
+2x2: false
+
+3x3: false
+
+4x4: true
+_ _ Q _
+Q _ _ _
+_ _ _ Q
+_ Q _ _
+
+5x5: true
+Q _ _ _ _
+_ _ _ Q _
+_ Q _ _ _
+_ _ _ _ Q
+_ _ Q _ _
+
+8x8: true
+Q _ _ _ _ _ _ _
+_ _ _ _ _ _ Q _
+_ _ _ _ Q _ _ _
+_ _ _ _ _ _ _ Q
+_ Q _ _ _ _ _ _
+_ _ _ Q _ _ _ _
+_ _ _ _ _ Q _ _
+_ _ Q _ _ _ _ _
+
+10x10: true
+Q _ _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ Q _ _
+_ Q _ _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ Q _
+_ _ _ _ _ Q _ _ _ _
+_ _ Q _ _ _ _ _ _ _
+_ _ _ _ _ _ _ _ _ Q
+_ _ _ Q _ _ _ _ _ _
+_ _ _ _ _ _ Q _ _ _
+_ _ _ _ Q _ _ _ _ _
