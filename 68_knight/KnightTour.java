@@ -148,7 +148,7 @@ class TourFinder
    **/
   public void findTour( int x, int y, int moves )
   {
-    delay(5); //slow it down enough to be followable
+    delay(100); //slow it down enough to be followable
 
     //if a tour has been completed, stop animation
     if ( _solved == true ) System.exit(0);
