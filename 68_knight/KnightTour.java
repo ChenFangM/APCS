@@ -2,16 +2,26 @@
 // APCS pd6
 // HW68 -- recursively probing for a closed cycle
 // 2022-03-01w
-// time spent:  hrs
+// time spent: 1 hrs
 
 /***
  * ALGO
+ * With a starting position of the knight, moving in every possible position the
+ * knight can go, recursively. Possible combinations "branch" out until a branch
+ * is deemed not a winning combination in which case, the move is retracted --
+ * replaced by a 0.
  *
  * DISCO
+ * 0: You could write two classes in one java file!
+ * 1: Recalling a function in itself multiple times consecutively is really neat
+ * for branching because if the recursions previously called yield no result,
+ * it just tries the next possible choice without having to write a "go back"
+ * method.
  *
  * QCC
+ * 0: Is starting at the corner of the board always ideal? Why?
  *
- * Mean execution times for boards of size n*n:
+ * Mean execution times for boards of size n*n: (no delay)
  * n=5   __s    across __ executions
  * n=6   __s    across __ executions
  * n=7   __s    across __ executions
@@ -148,7 +158,7 @@ class TourFinder
    **/
   public void findTour( int x, int y, int moves )
   {
-    delay(5); //slow it down enough to be followable
+    delay(0); //slow it down enough to be followable
 
     //if a tour has been completed, stop animation
     if ( _solved == true ) System.exit(0);
