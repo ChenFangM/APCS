@@ -22,7 +22,7 @@
  * 0: Is starting at the corner of the board always ideal? Why?
  *
  * Mean execution times for boards of size n*n: (no delay)
- * n=5   __s    across __ executions
+ * n=5   175s    across 3 executions
  * n=6   __s    across __ executions
  * n=7   __s    across __ executions
  * n=8   __s    across __ executions
