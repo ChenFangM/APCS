@@ -5,15 +5,6 @@
 // time spent:  hrs
 
 /***
- * SKELETON
- * class KnightTour (and supporting class TourFinder)
- * Animates generation of a Knight's Tour on a square chess board.
- *
- * USAGE: (default N value: 8)
- * $ javac KnightTour.java
- * $ java KnightTour
- * $ java KnightTour [N]
- *
  * ALGO
  *
  * DISCO
@@ -157,7 +148,7 @@ class TourFinder
    **/
   public void findTour( int x, int y, int moves )
   {
-    delay(50); //slow it down enough to be followable
+    delay(5); //slow it down enough to be followable
 
     //if a tour has been completed, stop animation
     if ( _solved == true ) System.exit(0);
@@ -208,6 +199,7 @@ class TourFinder
 
       System.out.println( this ); //refresh screen
     }
+
   }//end findTour()
 
 }//end class TourFinder
