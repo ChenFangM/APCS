@@ -130,18 +130,18 @@ class MazeSolver
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
-    if ( _maze[x][y].compareTo("$") == 0 ) {
-      return;
+    if ( ??? ) {
+	???
     }
     //other base cases
-    else if ( _maze[x][y].compareTo(".") == 0 ) {
+    else if ( ??? ) {
+	???
       return;
     }
-
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
-    else { // traverse
-	    _maze[x][y] = @;
+    else {
+	???
       System.out.println( this ); //refresh screen
 
 ???
@@ -151,7 +151,7 @@ class MazeSolver
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-      return (_maze[x][y].compareTo("#") == 0);
+
   }
 
 }//end class MazeSolver
@@ -170,8 +170,7 @@ public class Maze
       System.out.println( "USAGE:\n $ java Maze path/to/filename" );
     }
 
-    if (mazeInputFile==nul
-    l) { System.exit(0); }
+    if (mazeInputFile==null) { System.exit(0); }
 
     MazeSolver ms = new MazeSolver( mazeInputFile );
 
