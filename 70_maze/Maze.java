@@ -1,22 +1,22 @@
-// Clyde Sinclair
-// APCS pd0
-// HW69 -- maze solving (blind, depth-first)
-// 2022-03-03r
-// time spent:  hrs
+/* Taro: Melody Lew, Ben Belotser, Fang Min Chen
+APCS pd 06
+HW70 -- Thinkers Of The Corn
+2022-03-06
+time spent:
+
+Algorithm:
+0. Pick a starting position.
+1. If you can go forward, go forward.
+2. If you cannot move forward but you can turn left, turn left.
+3. If you cannot move forward or turn left but you can turn right, turn right.
+4. If the above movements are not available, return to most recent space on maze where >1 moves were possible,
+then repeat steps 1-3. (code will make sure hero cannot go onto previously visited space,
+avoiding a deadend loop)
+5. Repeat steps 2-5 until you reach the exit.
+
+*/
 
 /***
- * SKEELTON for
- * class MazeSolver
- * Implements a blind depth-first exit-finding algorithm.
- * Displays probing in terminal.
- *
- * USAGE:
- * $ java Maze [path/to/mazefile]
- * (mazefile is ASCII representation of a maze, using symbols below)
- *
- * ALGORITHM for finding exit from starting position:
- *  <INSERT YOUR SUMMARY OF ALGO HERE>
- *
  * DISCO
  *
  * QCC
@@ -130,12 +130,12 @@ class MazeSolver
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
-    if ( ??? ) {
-	???
+    if ( _maze[x][y] == EXIT ) {
+	     _solved = true;
     }
     //other base cases
-    else if ( ??? ) {
-	???
+    else if ( _maze[x][y] == WALL) {
+
       return;
     }
     //otherwise, recursively solve maze from next pos over,
@@ -151,7 +151,7 @@ class MazeSolver
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
-
+    return (_maze[x][y] == PATH);
   }
 
 }//end class MazeSolver
