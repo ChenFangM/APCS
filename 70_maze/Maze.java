@@ -1,8 +1,9 @@
 /* Taro: Melody Lew, Ben Belotser, Fang Min Chen
 APCS pd 06
 HW70 -- Thinkers Of The Corn
-2022-03-06
-time spent:
+2022-03-07m
+time spent: 2.0 hrs
+
 
 Algorithm:
 0. Pick a starting position.
@@ -13,14 +14,14 @@ Algorithm:
 then repeat steps 1-3. (code will make sure hero cannot go onto previously visited space,
 avoiding a deadend loop)
 5. Repeat steps 2-5 until you reach the exit.
-
 */
 
 /***
  * DISCO
- *
+ * 0. _maze[x][y] == WALL vs _maze[x][y] = WALL : == checks if the current position
+ is a wall and = assigns the current position as a wall
  * QCC
- *
+ * out of bounds error occurs when Hero goes on border
  ***/
 
 //enable file I/O
@@ -48,6 +49,9 @@ class MazeSolver
   {
     // init 2D array to represent maze
     // (80x25 is default terminal window size)
+
+
+
     _maze = new char[80][25];
     h = 0;
     w = 0;
@@ -130,24 +134,32 @@ class MazeSolver
     delay( FRAME_DELAY ); //slow it down enough to be followable
 
     //primary base case
-    if ( _maze[x][y] == EXIT ) {
-	     _solved = true;
+    if ( _solved ) {
+	     System.exit(0);
+       return;
     }
     //other base cases
-    else if ( _maze[x][y] == WALL) {
-
+    else if ( _maze[x][y] == EXIT) {
+      _solved = true;
       return;
     }
+    else if (_maze[x][y] != PATH){
+      return;
+    } //border + wall
     //otherwise, recursively solve maze from next pos over,
     //after marking current location
     else {
-	???
+      _maze[x][y] = HERO;
       System.out.println( this ); //refresh screen
-
-???
+      solve(x-1, y); //west
+      solve(x,y+1); //north
+      solve(x+1,y); //east
+      solve(x,y-1); //south
+      _maze[x][y] = VISITED_PATH;
       System.out.println( this ); //refresh screen
     }
   }
+
 
   //accessor method to help with randomized drop-in location
   public boolean onPath( int x, int y) {
@@ -182,11 +194,21 @@ public class Maze
 
     //drop hero into the maze (coords must be on path)
     // ThinkerTODO: comment next line out when ready to randomize startpos
-    ms.solve( 4, 3 );
+
+
+
+
+  //  ms.solve( 4, 3 );
 
     //drop our hero into maze at random location on path
-    // YOUR RANDOM-POSITION-GENERATOR CODE HERE
-    //ms.solve( startX, startY );
+    int startX = (int)(Math.random()*80);
+    int startY = (int)(Math.random()*25);
+    while (ms.onPath(startX, startY) == false){
+      startX = (int)(Math.random()*80);
+      startY = (int)(Math.random()*25);
+    }
+
+    ms.solve( startX, startY );
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
