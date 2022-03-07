@@ -10,16 +10,17 @@ Algorithm:
 1. If you can go forward, go forward.
 2. If you cannot move forward but you can turn left, turn left.
 3. If you cannot move forward or turn left but you can turn right, turn right.
-4. If the above movements are not available, return to most recent space on maze where >1 moves were possible,
-then repeat steps 1-3. (code will make sure hero cannot go onto previously visited space,
-avoiding a deadend loop)
+4. If the above movements are not available, return to most recent space on maze
+where >1 moves were possible, then repeat steps 1-3. (code will make sure hero
+cannot go onto previously visited space, avoiding a deadend loop)
 5. Repeat steps 2-5 until you reach the exit.
 */
 
 /***
  * DISCO
- * 0. _maze[x][y] == WALL vs _maze[x][y] = WALL : == checks if the current position
- is a wall and = assigns the current position as a wall
+ * 0. _maze[x][y] == WALL vs _maze[x][y] = WALL : == checks if the current
+ * position is a wall and = assigns the current position as a wall
+ *
  * QCC
  * out of bounds error occurs when Hero goes on border
  ***/
