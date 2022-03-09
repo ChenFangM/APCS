@@ -1,0 +1,28 @@
+Butterfinger: Melody Lew, Fang Min Chen, Corina Chen
+APCS pd06
+HW71 -- Reading for intent, tracing for VICTORY
+2022-03-07t
+Time spent:  1 hr
+
+DISCO
+- Our "hypotheses" works only when c is equal to or less than 2.
+- The order of the elements to either side of c does not matter in regards to
+order.
+- This pattern only keeps up until c is greater than 2.
+
+QCC
+- If our hypotheses is correct, why doesn't it work when c is greater than 2?
+
+q0: What does it do?
+a0: create a partition at "c" where every value to the left of "c" is less than
+"c" and every value to the right of "c" is greater than "c"
+
+q1: O(?)
+a1: O(n) because we are running through one for-loop, hence the outcome will be
+linear to the input.
+
+
+Hypotheses:
+- possible values of a box plot?????????????????????????????????????????
+- creating a partition at "c" where every value to the left of "c" is less than
+"c" and every value to the right of "c" is greater than "c"
