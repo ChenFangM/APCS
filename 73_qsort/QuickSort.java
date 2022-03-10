@@ -42,6 +42,8 @@
 
 3.explain how you handle duplicate values in the array.
 
+  We treated any duplicate value to act as if it is smaller than the element in the pivot position,
+  thus increasing the new pivotIndex by however many duplicates there are
 */
 
 public class QuickSort
