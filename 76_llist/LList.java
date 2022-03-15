@@ -3,6 +3,7 @@
 // HW76 -- We Got a Little Ol' Convoy
 // 2022-03-15
 // time spent: 1 hr
+// KtS consumed: 2
 
 /***
  * class LList
