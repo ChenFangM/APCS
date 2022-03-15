@@ -1,3 +1,9 @@
+// (FA)FSA: Fang, Sophia, Ameer
+// APCS pd06
+// HW76 -- We Got a Little Ol' Convoy
+// 2022-03-15
+// time spent:
+
 /***
  * class LList
  * Implements a linked list of LLNodes, each containing String data
@@ -11,9 +17,10 @@ public class LList implements List //interface def must be in this dir
   private int _size;
 
   // constructor -- initializes instance vars
-  public LList( )
+  public LList(  )
   {
-    // YOUR CODE HERE
+    _head = new LLNode(null, null);
+    _size = 0;
   }
 
 
@@ -21,7 +28,18 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    // YOUR CODE HERE
+    if (_size == 0) {
+      _head.setCargo(newVal);
+    } else {
+      LLNode alias = _head;
+      for (int i = 0; i < _size - 1; i ++) {
+        alias = alias.getNext();
+      }
+      alias.setNext(new LLNode(newVal, null));
+    }
+
+    _size ++;
+    return true;
   }
 
 
@@ -30,24 +48,35 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    // YOUR CODE HERE
+    LLNode alias = _head;
+    for (int i = 0; i < index; i++) {
+      alias = alias.getNext();
+    }
+
+    return alias.getCargo();
   }
 
 
   public String set( int index, String newVal )
   {
-
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    // YOUR CODE HERE
+    LLNode alias = _head;
+    for (int i = 0; i < index; i ++) {
+      alias = alias.getNext();
+    }
+
+    String oldVal = alias.getCargo();
+    alias.setCargo(newVal);
+    return oldVal;
   }
 
 
   //return number of nodes in list
   public int size()
   {
-    // YOUR CODE HERE
+    return _size;
   }
 
   //--------------^  List interface methods  ^--------------
@@ -57,14 +86,25 @@ public class LList implements List //interface def must be in this dir
   // override inherited toString
   public String toString()
   {
-    // YOUR CODE HERE
+    LLNode alias = _head;
+    String str = "[";
+
+    if (_size == 0) {
+      return str + "]";
+    }
+
+    while (alias.getNext() != null) {
+        str += alias + ", ";
+        alias = alias.getNext();
+    }
+    return str + alias + "]";
+
   }
 
 
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
 
     System.out.println( james );
@@ -92,6 +132,7 @@ public class LList implements List //interface def must be in this dir
     System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
 
     System.out.println( james );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
