@@ -2,7 +2,7 @@
 // APCS pd06
 // HW76 -- We Got a Little Ol' Convoy
 // 2022-03-15
-// time spent:
+// time spent: 1 hr
 
 /***
  * class LList
