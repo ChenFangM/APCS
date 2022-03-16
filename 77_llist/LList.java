@@ -13,15 +13,15 @@ QCC
 tmp to _head give it the reference of _head instead of a copy of the contents?
 
 ALGO ADD
-- Traverse to the node with given index.
-- Set next to a new node with the cargo as that of the current node and next as
-that of the current node
-- Set the cargo to the new value.
+- Traverse to the node with given index - 1.
+- Set next to a new node with the cargo as newVal and next as
+that of the current node.
+- Increase size by 1.
 
 ALGO REMOVE
-- Traverse to the node with given index.
-- Set the cargo as that of the next node.
-- Set next to that of the next node.
+- Traverse to the node with given index - 1.
+- Set next to the next of the next of the current node.
+- Decrease size by 1.
 
 */
 
@@ -103,11 +103,11 @@ public class LList implements List //interface def must be in this dir
     LLNode tmp = _head; //create alias to head
 
     //walk to desired node
-    for( int i=0; i < index; i++ )
+    for( int i=0; i < index - 1; i++ )
       tmp = tmp.getNext();
 
-    tmp.setNext( new LLNode( tmp.getCargo(), tmp.getNext() ) );
-    tmp.setCargo( newVal );
+    tmp.setNext( new LLNode( newVal, tmp.getNext() ) );
+    _size ++;
   }
 
   public String remove(int index)
@@ -118,12 +118,12 @@ public class LList implements List //interface def must be in this dir
     LLNode tmp = _head; //create alias to head
 
     //walk to desired node
-    for( int i=0; i < index; i++ )
+    for( int i=0; i < index - 1; i++ )
       tmp = tmp.getNext();
 
-    String oldVal = tmp.getCargo();
-    tmp.setCargo( tmp.getNext().getCargo() );
-    tmp.setNext( tmp.getNext().getNext() );
+    String oldVal = tmp.getNext().getCargo();
+    tmp.setNext(tmp.getNext().getNext());
+    _size --;
 
     return oldVal;
   }
@@ -167,14 +167,17 @@ public class LList implements List //interface def must be in this dir
     james.set( 1, "got" );
 
     System.out.println( james );
+    System.out.println( james.size() );
 
     james.add( 3, "blah" );
 
     System.out.println( james );
+    System.out.println( james.size() );
 
     james.remove( 3 );
 
     System.out.println( james );
+    System.out.println( james.size() );
   }
 
 }//end class LList
