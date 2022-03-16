@@ -155,28 +155,24 @@ public class LList implements List //interface def must be in this dir
     LList james = new LList();
 
     System.out.println( james );
-    System.out.println( "size: " + james.size() );
 
     james.add("beat");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
 
     james.add("a");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
 
     james.add("need");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
 
     james.add("I");
-    System.out.println( james );
-    System.out.println( "size: " + james.size() );
-
-    System.out.println( "2nd item is: " + james.get(1) );
 
     james.set( 1, "got" );
-    System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
+
+    System.out.println( james );
+
+    james.add( 3, "blah" );
+
+    System.out.println( james );
+
+    james.remove( 3 );
 
     System.out.println( james );
   }
