@@ -11,6 +11,15 @@ QCC
 - Regarding the DISCO, since java is pass-by-value, why does setting the LLNode
 tmp to _head give it the reference of _head instead of a copy of the contents?
 
+ALGO ADD
+- Traverse to the node with index.
+- Set next to a new node with the cargo as that of the current node and next as
+that of the current node
+- Set the cargo to the new value.
+
+ALGO REMOVE
+- Traverse to the node with index.
+
 
 */
 
