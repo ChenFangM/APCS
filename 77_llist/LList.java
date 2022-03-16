@@ -94,6 +94,21 @@ public class LList implements List //interface def must be in this dir
     return oldVal;
   }
 
+  public void add(int index, String newVal)
+  {
+    if ( index < 0 || index >= size() )
+      throw new IndexOutOfBoundsException();
+
+    LLNode tmp = _head; //create alias to head
+
+    //walk to desired node
+    for( int i=0; i < index; i++ )
+      tmp = tmp.getNext();
+
+    tmp.setNext( new LLNode( tmp.getCargo(), tmp.getNext() ) );
+    tmp.setCargo( newVal );
+  }
+
 
   //return number of nodes in list
   public int size() { return _size; }
