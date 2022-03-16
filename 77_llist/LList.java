@@ -5,6 +5,7 @@
 // time spent: .5 hrs
 
 /*
+
 DISCO
 - If you modify an alias, the original Object is modified as well.
 QCC
@@ -123,6 +124,8 @@ public class LList implements List //interface def must be in this dir
     String oldVal = tmp.getCargo();
     tmp.setCargo( tmp.getNext().getCargo() );
     tmp.setNext( tmp.getNext().getNext() );
+
+    return oldVal;
   }
 
 
