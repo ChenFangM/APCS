@@ -109,6 +109,22 @@ public class LList implements List //interface def must be in this dir
     tmp.setCargo( newVal );
   }
 
+  public String remove(int index)
+  {
+    if ( index < 0 || index >= size() )
+      throw new IndexOutOfBoundsException();
+
+    LLNode tmp = _head; //create alias to head
+
+    //walk to desired node
+    for( int i=0; i < index; i++ )
+      tmp = tmp.getNext();
+
+    String oldVal = tmp.getCargo();
+    tmp.setCargo( tmp.getNext().getCargo() );
+    tmp.setNext( tmp.getNext().getNext() );
+  }
+
 
   //return number of nodes in list
   public int size() { return _size; }
