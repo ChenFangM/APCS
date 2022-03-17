@@ -94,7 +94,9 @@ public class LList implements List //interface def must be in this dir
     for( int i=0; i < index - 1; i++ )
       tmp = tmp.getNext();
 
-    tmp.setNext( new DLLNode( newVal, tmp.getNext() ) );
+    tmp.setNext( new DLLNode( tmp, newVal, tmp.getNext() ) );
+    tmp = tmp.getNext();
+    tmp.getNext().setPrev(tmp);
     _size ++;
   }
 
