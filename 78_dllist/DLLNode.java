@@ -8,9 +8,9 @@ public class DLLNode
   // constructor
   public DLLNode( DLLNode prev, String value, DLLNode next )
   {
+    _prevNode = prev;
     _cargo = value;
     _nextNode = next;
-    _prevNode = prev;
   }
 
 
