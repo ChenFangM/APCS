@@ -96,7 +96,7 @@ public class LList implements List //interface def must be in this dir
 
     tmp.setNext( new DLLNode( tmp, newVal, tmp.getNext() ) );
     tmp = tmp.getNext();
-    tmp.getNext().setPrev(tmp);
+    tmp.getNext().setPrev( tmp );
     _size ++;
   }
 
@@ -113,6 +113,7 @@ public class LList implements List //interface def must be in this dir
 
     String oldVal = tmp.getNext().getCargo();
     tmp.setNext(tmp.getNext().getNext());
+    tmp.getNext().setPrev( tmp );
     _size --;
 
     return oldVal;
