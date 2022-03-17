@@ -36,8 +36,9 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    DLLNode tmp = new DLLNode( newVal, _head );
-    _head = tmp;
+    DLLNode tmp = _head;
+    tmp.setPrev( new DLLNode( null, newVal, tmp ) );
+    _head = tmp.getPrev();
     _size++;
     return true;
   }
