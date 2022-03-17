@@ -14,14 +14,14 @@ QCC
 
 /***
  * class LList
- * Implements a linked list of LLNodes, each containing String data
+ * Implements a linked list of DLLNodes, each containing String data
  **/
 
 public class LList implements List //interface def must be in this dir
 {
 
   //instance vars
-  private LLNode _head;
+  private DLLNode _head;
   private int _size;
 
   // constructor -- initializes instance vars
@@ -36,7 +36,7 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    LLNode tmp = new LLNode( newVal, _head );
+    DLLNode tmp = new DLLNode( newVal, _head );
     _head = tmp;
     _size++;
     return true;
@@ -49,7 +49,7 @@ public class LList implements List //interface def must be in this dir
       throw new IndexOutOfBoundsException();
 
     String retVal;
-    LLNode tmp = _head; //create alias to head
+    DLLNode tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
@@ -67,7 +67,7 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    LLNode tmp = _head; //create alias to head
+    DLLNode tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index; i++ )
@@ -87,13 +87,13 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    LLNode tmp = _head; //create alias to head
+    DLLNode tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index - 1; i++ )
       tmp = tmp.getNext();
 
-    tmp.setNext( new LLNode( newVal, tmp.getNext() ) );
+    tmp.setNext( new DLLNode( newVal, tmp.getNext() ) );
     _size ++;
   }
 
@@ -102,7 +102,7 @@ public class LList implements List //interface def must be in this dir
     if ( index < 0 || index >= size() )
       throw new IndexOutOfBoundsException();
 
-    LLNode tmp = _head; //create alias to head
+    DLLNode tmp = _head; //create alias to head
 
     //walk to desired node
     for( int i=0; i < index - 1; i++ )
@@ -126,7 +126,7 @@ public class LList implements List //interface def must be in this dir
   public String toString()
   {
     String retStr = "HEAD->";
-    LLNode tmp = _head; //init tr
+    DLLNode tmp = _head; //init tr
     while( tmp != null ) {
 	    retStr += tmp.getCargo() + "->";
 	    tmp = tmp.getNext();

@@ -1,12 +1,12 @@
-public class LLNode
+public class DLLNode
 {
   //instance vars
   private String _cargo;
-  private LLNode _nextNode;
-  private LLNode _prevNode;
+  private DLLNode _nextNode;
+  private DLLNode _prevNode;
 
   // constructor
-  public LLNode( LLNode prev, String value, LLNode next )
+  public DLLNode( DLLNode prev, String value, DLLNode next )
   {
     _cargo = value;
     _nextNode = next;
@@ -20,12 +20,12 @@ public class LLNode
     return _cargo;
   }
 
-  public LLNode getNext()
+  public DLLNode getNext()
   {
     return _nextNode;
   }
 
-  public LLNode getPrev()
+  public DLLNode getPrev()
   {
     return _prevNode;
   }
@@ -41,16 +41,16 @@ public class LLNode
     return foo;
   }
 
-  public LLNode setNext( LLNode newNext )
+  public DLLNode setNext( DLLNode newNext )
   {
-    LLNode foo = getNext();
+    DLLNode foo = getNext();
     _nextNode = newNext;
     return foo;
   }
 
-  public LLNode setPrev( LLNode newPrev )
+  public DLLNode setPrev( DLLNode newPrev )
   {
-    LLnode foo = getPrev();
+    DLLNode foo = getPrev();
     _prevNode = newPrev;
     return foo;
   }
@@ -70,4 +70,4 @@ public class LLNode
 
   }//end main
 
-}//end class LLNode
+}//end class DLLNode
