@@ -4,14 +4,6 @@
 // 2022-03-17
 // time spent: .5 hrs
 
-/*
-
-DISCO
--
-QCC
-
-*/
-
 /***
  * class LList
  * Implements a linked list of DLLNodes, each containing String data
@@ -36,9 +28,13 @@ public class LList implements List //interface def must be in this dir
 
   public boolean add( String newVal )
   {
-    DLLNode tmp = _head;
-    tmp.setPrev( new DLLNode( null, newVal, tmp ) );
-    _head = tmp.getPrev();
+    if (_size == 0) {
+      _head = new DLLNode(null, newVal, null);
+    } else {
+      DLLNode tmp = _head;
+      tmp.setPrev( new DLLNode( null, newVal, tmp ) );
+      _head = tmp.getPrev();
+    }
     _size++;
     return true;
   }
@@ -91,12 +87,16 @@ public class LList implements List //interface def must be in this dir
     DLLNode tmp = _head; //create alias to head
 
     //walk to desired node
-    for( int i=0; i < index - 1; i++ )
+    for( int i=0; i < index; i++ )
       tmp = tmp.getNext();
 
-    tmp.setNext( new DLLNode( tmp, newVal, tmp.getNext() ) );
-    tmp = tmp.getNext();
-    tmp.getNext().setPrev( tmp );
+    if (tmp.getPrev() != null) {
+      tmp.setPrev( new DLLNode( tmp.getPrev(), newVal, tmp ) );
+      tmp = tmp.getPrev();
+      tmp.getPrev().setNext(tmp);
+    } else {
+      add(newVal);
+    }
     _size ++;
   }
 
@@ -106,14 +106,19 @@ public class LList implements List //interface def must be in this dir
       throw new IndexOutOfBoundsException();
 
     DLLNode tmp = _head; //create alias to head
-
+    String oldVal = null;
     //walk to desired node
-    for( int i=0; i < index - 1; i++ )
+    for( int i=0; i < index; i++ )
       tmp = tmp.getNext();
 
-    String oldVal = tmp.getNext().getCargo();
-    tmp.setNext(tmp.getNext().getNext());
-    tmp.getNext().setPrev( tmp );
+    if (tmp.getPrev() != null) {
+      tmp.getPrev().setNext(tmp.getNext());
+    }
+    if (tmp.getNext() != null) {
+      oldVal = tmp.getNext().getCargo();
+      tmp.getNext().setPrev(tmp.getPrev());
+    }
+
     _size --;
 
     return oldVal;
