@@ -1,27 +1,14 @@
 // (FA)FSA: Fang, Sophia, Ammer
 // APCS pd06
-// HW77 -- Insert|Remove
-// 2022-03-14m
+// HW78 -- Double Up
+// 2022-03-17
 // time spent: .5 hrs
 
 /*
 
 DISCO
-- If you modify an alias, the original Object is modified as well.
+-
 QCC
-- Regarding the DISCO, since java is pass-by-value, why does setting the LLNode
-tmp to _head give it the reference of _head instead of a copy of the contents?
-
-ALGO ADD
-- Traverse to the node with given index - 1.
-- Set next to a new node with the cargo as newVal and next as
-that of the current node.
-- Increase size by 1.
-
-ALGO REMOVE
-- Traverse to the node with given index - 1.
-- Set next to the next of the next of the current node.
-- Decrease size by 1.
 
 */
 
