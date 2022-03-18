@@ -70,11 +70,10 @@ public class Deck {
 	public Card deal() {
 		if (isEmpty()) {
 			return null;
-		} else {
-			Card picked = cards.get(size);
-			size --;
-			return picked;
 		}
+		Card picked = cards.get(size);
+		size --;
+		return picked;
 	}
 
 	/**
