@@ -8,6 +8,8 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		Deck A = new Deck(["2", "A", "K"], ["Spades", "Hearts", "Clubs"], [2, 1, 13]);
+		Deck B = new Deck(["2", "A"], ["Spades", "Hearts"], [2, 1]);
+		Deck C = new Deck([], [], []);
 	}
 }
