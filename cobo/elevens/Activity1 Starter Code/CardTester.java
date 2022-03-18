@@ -8,9 +8,9 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		Card A = new Card("2", "Spade", 2);
-		Card B = new Card("A", "Diamond", 1);
-		Card C = new Card("A", "Diamond", 1);
+		Card A = new Card("2", "Spades", 2);
+		Card B = new Card("A", "Diamonds", 1);
+		Card C = new Card("A", "Diamonds", 1);
 
 		System.out.println(A);
 		System.out.println(B);
