@@ -1,0 +1,9 @@
+Binary to decimal conversion:
+1. Take the leftmost digit of the given binary code and multiply it by 2. 
+2. Then add the next digit (right of the original) with the product.
+3. Continue this process by multiplying the sum by 2 and add the proceeding digit again. Repeat until you reach the end of the binary code. 
+4. The last sum will be your decimal value.
+ 
+Decimal to binary conversion:
+1. Take the decimal number and repeatedly divide it by 2. Since the remainder of division is always either 1 or 0, we can use these remainders to convert to a binary number. 
+2. Take the remainders in order and that will be your binary code from left to right.
