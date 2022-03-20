@@ -8,8 +8,17 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		Deck A = new Deck(["2", "A", "K"], ["Spades", "Hearts", "Clubs"], [2, 1, 13]);
-		Deck B = new Deck(["2", "A"], ["Spades", "Hearts"], [2, 1]);
-		Deck C = new Deck([], [], []);
+		String[] ranks = {"2", "A", "K"};
+		String[] suits = {"Spades", "Hearts", "Clubs"};
+		int[] pointValues = {2, 1, 13};
+		Deck A = new Deck(ranks, suits, pointValues);
+		for (int i = ranks.length; i >= 0; i--) {
+			System.out.println("------------------------------------------------------");
+			System.out.println( "DECK OF LENGTH " + i + " toString method: " + A.toString() );
+			System.out.println("------------------------------------------------------");
+			System.out.println( "DECK OF LENGTH " + i + " size method: " + A.size() );
+			System.out.println( "DECK OF LENGTH " + i + " isEmpty method: " + A.isEmpty() );
+			System.out.println( "DECK OF LENGTH " + i + " deal method: " + A.deal() );
+		}
 	}
 }
