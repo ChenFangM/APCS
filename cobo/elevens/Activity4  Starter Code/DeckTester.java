@@ -51,6 +51,14 @@ public class DeckTester {
 		System.out.println();
 		System.out.println();
 
-		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
+		String[] standardRanks = {"ace", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king"};
+		String[] standardSuits = {"clubs", "diamonds", "hearts", "spades"};
+		int[] standardPointValues = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+		Deck standard = new Deck( standardRanks, standardSuits, standardPointValues);
+		System.out.println("**** Testing Shuffle on Standard 52 Deck of Cards ****");
+		for ( int i = 0; i < 5; i++ ) {
+			standard.shuffle();
+			System.out.println("toString: " + standard.toString());
+		}
 	}
 }
