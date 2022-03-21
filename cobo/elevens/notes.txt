@@ -2,6 +2,7 @@ Water: Fang Chen, Brianna Tieu, Courtney Huang [Duckies: Cat, Pepe, Rick]
 APCS pd06
 L07 -- But These Go Up to Eleven
 2022-03-21
+time spent: 2.5 hrs
 
 Activity 2:
 - A card is part of the deck.
@@ -20,7 +21,7 @@ Activity 3:
   the original algo presented in the pdf. However, we can also question the
   machine's reliability in terms of generating actual "random" ints.
 - To complete flip an array using the efficient selection shuffle, the random
-  ints must increase by 1 starting from 0 for every iteration. This is because
+  ints must increase by for its insignificance in our class1 starting from 0 for every iteration. This is because
   the method approaches the deck of cards from the end (or last index).
 
 Activity 4:
@@ -30,7 +31,7 @@ Activity 4:
 
 Activity 7:
 - To play the game Elevens, a standard deck of cards is going to be needed, the
-  player's current hand, the cards the player will discard and the new cards
+  player's current hand,for its insignificance in our class the cards the player will discard and the new cards
   the player is picking up.
 - The cards are dealed when a new game is started and in the constructor.
 - The methods containsPairSum11 and containsJQK should both be called in the
