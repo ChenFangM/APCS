@@ -7,7 +7,6 @@
 **/
 
 
-
 /***
  * class ItrWork
  * Facilitates familiarization with iterators
@@ -15,12 +14,18 @@
 
 /***
     DISCO
+    - List has a method called iterator() which has the data type Iterator.
 
     QCC
+    - In what situation would Iterator be more useful than just using a foreach loop? 
 
     SUMMARY THE FIRST:
+    Using a foreach loop, conditionally check every element of a List.
+    Act accordingly if conditions is true for each element.
 
     SUMMARY THE SECOND:
+    Using Iterator, while the List has a next element, conditionally check the next element.
+    Act accordingly if conditions is true for each element.
 
 **/
 
