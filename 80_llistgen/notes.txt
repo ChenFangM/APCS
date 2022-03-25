@@ -1,0 +1,11 @@
+// (FA)FSA: Fang, Sophia, Ammer
+// APCS pd06
+// HW80 -- Generically Speaking
+// 2022-03-25
+// time spent: .5 hrs
+
+DISCO
+- T can be used as a "variable" data type
+
+QCC
+- What is the reason of the error that pops up if T is used instead of Object in our List interface?
