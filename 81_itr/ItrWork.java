@@ -1,4 +1,4 @@
-/*** 
+/***
 * (FA)FSA: Fang, Sophia, Ameer
 * APCS pd06
 * HW81 -- Thank You, Next
@@ -17,7 +17,7 @@
     - List has a method called iterator() which has the data type Iterator.
 
     QCC
-    - In what situation would Iterator be more useful than just using a foreach loop? 
+    - In what situation would Iterator be more useful than just using a foreach loop?
 
     SUMMARY THE FIRST:
     Using a foreach loop, conditionally check every element of a List.
@@ -88,8 +88,9 @@ public class ItrWork
     List<Integer> returner = new ArrayList<Integer>();
     Iterator itr = L.iterator();
     while ( itr.hasNext()){
-      if (((int)itr.next())%2 == 1){
-        returner.add((int)itr.next());
+      int x=(int)itr.next();
+     if (x%2 != 0){
+         returner.add(x);
       }
     }
     return returner;
@@ -100,8 +101,14 @@ public class ItrWork
   //modifies L s.t. it contains no evens
   public static void removeEvens( List<Integer> L )
   {
-    L = oddsB(L);
-  }
+    Iterator itr = L.iterator();
+    while ( itr.hasNext()){
+      int x=(int)itr.next();
+     if (x%2 == 0){
+         itr.remove();
+      }
+    }
+    }
 
 
   public static void main( String [] args )
