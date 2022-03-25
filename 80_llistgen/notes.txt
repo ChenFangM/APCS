@@ -1,4 +1,4 @@
-// (FA)FSA: Fang, Sophia, Ammer
+// (FA)FSA: Fang, Sophia, Ameer
 // APCS pd06
 // HW80 -- Generically Speaking
 // 2022-03-25
