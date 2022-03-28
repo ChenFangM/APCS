@@ -271,6 +271,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return next element in this iteration
     public T next()
     {
+      _okToRemove = true;
       return _dummy.getNext().getCargo();
     }
 
