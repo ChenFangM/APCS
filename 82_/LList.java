@@ -152,9 +152,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public Iterator<T> iterator();
+  public Iterator<T> iterator()
   {
-    Iterator<T> itr = MyIterator();
+    Iterator<T> itr = new MyIterator();
     return itr;
   }
 
@@ -271,10 +271,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return next element in this iteration
     public T next()
     {
-      if (hasNext()) {
-        _okToRemove = true;
-        return _dummy.getNext().getCargo();
-      }
+      return _dummy.getNext().getCargo();
     }
 
 
