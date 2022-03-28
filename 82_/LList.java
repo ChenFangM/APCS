@@ -255,7 +255,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      _dummy = _head;
+      _dummy = null;
       _okToRemove = false;
     }
 
@@ -264,6 +264,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
+      if (_dummy == null) {
+        return _head != null;
+      }
       return _dummy.getNext() != null;
     }
 
@@ -272,7 +275,11 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public T next()
     {
       _okToRemove = true;
-      _dummy = _dummy.getNext();
+      if (_dummy == null) {
+        _dummy = _head;
+      } else {
+        _dummy = _dummy.getNext();
+      }
       return _dummy.getCargo();
     }
 
