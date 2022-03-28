@@ -272,7 +272,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public T next()
     {
       _okToRemove = true;
-      return _dummy.getNext().getCargo();
+      _dummy = _dummy.getNext();
+      return _dummy.getCargo();
     }
 
 
@@ -282,7 +283,7 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     public void remove()
     {
       if (_okToRemove) {
-        _dummy = _dummy.getNext();
+        removeFirst();
         _okToRemove = false;
       }
     }
