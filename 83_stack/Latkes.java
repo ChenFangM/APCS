@@ -35,19 +35,22 @@ public class Latkes
   public void push( String s )
   {
     if(!isFull()){
-      _stack[_stackSize]=s;
-      _stackSize+=1;
+      for (int i=0; i < _stackSize; i++) {
+          _stack[_stackSize-i] = _stack[_stackSize-i-1];
+      _stack[0]=s;
+
     }
     else{
       String[] tmp= new String[_stackSize+1];
-      for(int i=0,j=1; i< _stack.length-1; i++,j++){
-        tmp[i]=_stack[j];
+      for(int i=0; i < _stackSize; i++){
+        tmp[i+1]=_stack[i];
       }
 
-      tmp[_stack.length-1]=s;
-      _stack=new String [_stackSize+1];
+      tmp[0]=s;
+
       _stack=tmp;
     }
+    _stackSize++;
   }// O(?)
 
   //means of removal
