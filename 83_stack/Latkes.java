@@ -38,16 +38,13 @@ public class Latkes
       for (int i=0; i < _stackSize; i++) {
           _stack[_stackSize-i] = _stack[_stackSize-i-1];
       _stack[0]=s;
-
     }
     else{
       String[] tmp= new String[_stackSize+1];
       for(int i=0; i < _stackSize; i++){
         tmp[i+1]=_stack[i];
       }
-
       tmp[0]=s;
-
       _stack=tmp;
     }
     _stackSize++;
@@ -58,11 +55,13 @@ public class Latkes
   {
     //[5,3,2]
     //[3,2,0]
-    String output=null;
+    String output = null;
     if(!isEmpty()){
-      output=_stack[_stackSize-1];
-      _stack[_stackSize-1]=null;
-      _stackSize--;
+      output = _stack[0];
+      for (int i = 0; i < _stackSize - 1; i++){
+      _stack[i] = _stack[i + 1];
+      }
+      _stack[_stackSize-1] = null;
     }
     return output;
   }// O(?)
