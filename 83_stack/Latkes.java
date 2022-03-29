@@ -37,8 +37,8 @@ public class Latkes
     if(!isFull()){
       for (int i=0; i < _stackSize; i++) {
           _stack[_stackSize-i] = _stack[_stackSize-i-1];
-      _stack[0]=s;
       }
+      _stack[0]=s;
     }
     else{
       String[] tmp= new String[_stackSize+1];
@@ -127,7 +127,7 @@ public class Latkes
     tastyStack.push("coocoo");
     System.out.println( tastyStack );
 
-    //cahoo
+    //cachoo
 
     tastyStack.push("cachoo");
     System.out.println( tastyStack );
