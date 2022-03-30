@@ -3,6 +3,17 @@
 // HW 84 -- Stack, Good for What
 // 2022-03-30
 // time spent: 1.0 hrs
+ 
+ ​/* 
+ ​DISCO 
+ ​- can reverse strings pretty easily 
+ ​- 2nd method was more difficult ( i think mostly in java inner workings) 
+ ​- don't think we have the nicest solution for allMatched, but alas 
+  
+ ​QCC 
+ ​- how would the efficiency improve compared to a different implementation (like loops)? 
+  
+ ​*/
 
 /***
  * class LatKtS
