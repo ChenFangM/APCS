@@ -3,16 +3,16 @@
 // HW 84 -- Stack, Good for What
 // 2022-03-30
 // time spent: 1.0 hrs
- 
- ​/* 
- ​DISCO 
- ​- can reverse strings pretty easily 
- ​- 2nd method was more difficult ( i think mostly in java inner workings) 
- ​- don't think we have the nicest solution for allMatched, but alas 
-  
- ​QCC 
- ​- how would the efficiency improve compared to a different implementation (like loops)? 
-  
+
+ ​/*
+ ​DISCO
+ ​- can reverse strings pretty easily
+ ​- 2nd method was more difficult ( i think mostly in java inner workings)
+ ​- don't think we have the nicest solution for allMatched, but alas
+
+ ​QCC
+ ​- how would the efficiency improve compared to a different implementation (like loops)?
+
  ​*/
 
 /***
@@ -52,7 +52,7 @@ public class LatKtS
   public static boolean allMatched( String s )
   {
     Latkes tails = new Latkes(s.length()); //
-    Latkes heads = new Latkes(s.length()); // 
+    Latkes heads = new Latkes(s.length()); //
     String tempt = ""; // )
     String temph = ""; // (
     Boolean match = false;
@@ -60,8 +60,8 @@ public class LatKtS
       tails.push(s.substring(s.length() - i - 1, s.length() - i));
     }
 
-    while (!(tails.isEmpty())) { 
-      
+    while (!(tails.isEmpty())) {
+
       tempt = tails.pop();
       if (tempt.equals("[") || tempt.equals("(") || tempt.equals("{")) {
         heads.push(tempt);
