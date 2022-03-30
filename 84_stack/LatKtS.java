@@ -1,6 +1,11 @@
+// (FA)FSA -- Fang, Sophia, Ameer
+// APCS Pd06
+// HW 84 -- Stack, Good for What
+// 2022-03-30
+// time spent: 1.0 hrs
+
 /***
  * class LatKtS
- * SKELETON
  * driver class for Latkes
  * Uses a stack to reverse a text string, check for sets of matching parens.
  **/
