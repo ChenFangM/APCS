@@ -15,6 +15,15 @@ public class LatKtS
    **/
   public static String flip( String s )
   {
+    Latkes str = new Latkes(s.length());
+    for (int i = 0; i < s.length(); i ++) {
+      str.push(s.substring(i, i + 1));
+    }
+    String flipped = "";
+    for (int i = 0; i < s.length(); i ++) {
+      flipped += str.pop();
+    }
+    return flipped;
   }
 
 
@@ -32,8 +41,8 @@ public class LatKtS
   //main method to test
   public static void main( String[] args )
   {
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
     System.out.println(flip("stressed"));
+    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
     System.out.println(allMatched( "({}[()])" )); //true
     System.out.println(allMatched( "([)]" ) ); //false
     System.out.println(allMatched( "(){([])}" ) ); //true
