@@ -1,8 +1,15 @@
+// (FA)FSA -- Fang, Sophia, Ameer
+// APCS Pd06
+// HW 85 -- Pancakes
+// 2022-03-30
+// time spent: 0.5 hrs
+
+import java.util.ArrayList;
 public class ALStack<PANCAKE> implements Stack<PANCAKE> {
 
   private ArrayList<PANCAKE> _stack;
 
-  public ALStack<PANCAKE>() {
+  public ALStack(){
     _stack = new ArrayList<PANCAKE>();
   }
 
@@ -11,17 +18,17 @@ public class ALStack<PANCAKE> implements Stack<PANCAKE> {
   }
 
   //Return true if this stack is empty, otherwise false.
-  public boolean isEmpty() 
+  public boolean isEmpty()
   {
     return size() == 0;
   }
 
   //Return top element of stack without popping it.
-  public PANCAKE peekTop() 
+  public PANCAKE peekTop()
   {
     return _stack.get(size() - 1);
   }
-  
+
   //Pop and return top element of stack.
   public PANCAKE pop()
   {
@@ -36,4 +43,3 @@ public class ALStack<PANCAKE> implements Stack<PANCAKE> {
 
 
 }
-
