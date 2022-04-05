@@ -1,8 +1,8 @@
-Team Phantom Tollbooth :: Clyde Sinclair, Fierce Dragon
-APCS
-LAB08 --
-2022-04-05
-time spent: <elapsed time in hours, rounded to nearest tenth>
+TNPG: Dysentery { Fang Chen, Brianna Tieu, Ethan Lam }
+APCS pd06
+L08: America's Next Top Data Scientist
+2022-04-06
+time spent: __ hr
 
 
 DISCO
