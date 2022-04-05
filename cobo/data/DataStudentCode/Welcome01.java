@@ -3,7 +3,7 @@ import core.data.*;
 public class Welcome01 {
    public static void main(String[] args) {
       String id = "KATL";
-      DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/" + id + ".xml"); 
+      DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/" + KJRB + ".xml"); 
       ds.setCacheTimeout(15 * 60);  
       ds.load();
       //ds.printUsageString();
