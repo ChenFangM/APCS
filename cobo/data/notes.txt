@@ -1,15 +1,16 @@
-TNPG: Dysentery { Fang Chen, Brianna Tieu, Ethan Lam }
-APCS pd06
-L08: America's Next Top Data Scientist
-2022-04-06
-time spent: __ hr
+Team Dysentery :: Brianna Tieu, Fang Chen, Ethan Lam
+APCS
+LAB08 -- America's Next Top Data Scientist
+2022-04-05
+time spent: 1.5 hrs
 
 
 DISCO
-
+- How to use javac -classpath .:path/to/sinbad.jar and the significance of -d
+-
 
 QCC
-
+- What is the significance of the Cereal.java class?
 
 <TNPG>'s CSV FLOW:
 <insert your description of your tools and workflow in creating, editing CSV files>
