@@ -1,2 +1,10 @@
 TNPG: Dysentery
 Roster: Fang Chen, Brianna Tieu, Ethan Lam
+
+Our overall experience with this lab can be summarized with the 
+word "success." We spent ages trying to get Welcome01.java to
+compile, to which succeeded with the help of le QAF posters. 
+Aside from this though, we had quickly got through the other 
+activities. 
+
+We skimmed through activity one, learning a little bit data sets. Activity two was the dealio regarding Welcome01.java, which enlightened us about jar files and javac flags. Though when we ran it, we got a lot of FileNotFoundException errors, the NYC temperature did print at the end!
