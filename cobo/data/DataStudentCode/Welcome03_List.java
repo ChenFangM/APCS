@@ -20,7 +20,7 @@ public class Welcome03_List {
       // System.out.println("Stations in " + state);
       WeatherStation south = allstns.get(0);
       for (WeatherStation ws : allstns) {
-        if (ws.isLower( allstns.getLat()) ) {
+        if (ws.isLower( south.getLat()) ) {
            south = ws;
           System.out.println("  " + south.getId() + ": " + south.getName());
         }
