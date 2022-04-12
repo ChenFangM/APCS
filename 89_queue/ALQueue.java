@@ -6,7 +6,8 @@
 
 import java.util.ArrayList;
 
-public class ALQueue<P> {
+public class ALQueue<P> implements Queue<P> 
+{
 
     private ArrayList<P> _queue;
 

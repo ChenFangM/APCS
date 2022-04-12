@@ -6,7 +6,8 @@
 
 import java.util.LinkedList;
 
-public class LLQueue<P> {
+public class LLQueue<P> implements Queue<P> 
+{
 
     private LinkedList<P> _queue;
 
