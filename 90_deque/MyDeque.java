@@ -4,13 +4,15 @@
 // 2022-04-13
 // time spent: 0.7 hrs
 
+import java.util.LinkedList;
+
 public class MyDeque<Card> implements Deque<Card> 
 {
-    private LLQueue<Card> _deque;
+    private LinkedList<Card> _deque;
 
     public MyDeque() 
     {
-        _deque = new LLQueue<Card>();
+        _deque = new LinkedList<Card>();
     }
 
     // Inserts the specified element at the front of this deque
