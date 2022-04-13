@@ -20,3 +20,6 @@ time spent: 0.7 hrs
 - addFirst()
 - removeLast()
 - peekLast()
+
+## Design decisions
+Use LinkedList methods.
