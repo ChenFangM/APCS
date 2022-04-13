@@ -1,8 +1,8 @@
 (FA)FSA: Fang, Sophia, Ameer
-APCS pd06
-HW 90: Swabbing the Deque
-2022-04-13
-time spent: 0.7 hrs
+\nAPCS pd06
+\nHW 90: Swabbing the Deque
+\n2022-04-13
+\ntime spent: 0.7 hrs
 
 ## To-Do List (Reference to Queue methods)
 
