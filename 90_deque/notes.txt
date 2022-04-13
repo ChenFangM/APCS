@@ -14,3 +14,4 @@ deciding which end to remove and which end to add.
 
 QCC
 - Should the add methods be of type void or boolean?
+- Is there any difference between Deque and LinkedList?
