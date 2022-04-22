@@ -241,5 +241,106 @@ been removed.
 
   }
 
+/* array6
+Given an array of ints, compute recursively if the array contains a 6. We'll 
+use the convention of considering only the part of the array that begins at the 
+given index. In this way, a recursive call can pass index+1 to move down the 
+array. The initial call will pass in index as 0.
+*/
+  public boolean array6(int[] nums, int index) {
+  
+    if (index > nums.length - 1) {
+      return false;
+    }
+    if (nums[index] == 6) {
+      return true;
+    }
+    return array6(nums, index + 1);
+  
+  }
+
+/* array11
+Given an array of ints, compute recursively the number of times that the value 
+11 appears in the array. We'll use the convention of considering only the part 
+of the array that begins at the given index. In this way, a recursive call can 
+pass index+1 to move down the array. The initial call will pass in index as 0.
+*/
+  public int array11(int[] nums, int index) {
+    
+    if (index > nums.length - 1) {
+      return 0;
+    }
+    if (nums[index] == 11) {
+      return 1 + array11(nums, index + 1);
+    }
+    return array11(nums, index + 1);
+  }
+
+/* array220
+Given an array of ints, compute recursively if the array contains somewhere a 
+value followed in the array by that value times 10. We'll use the convention of 
+considering only the part of the array that begins at the given index. In this 
+way, a recursive call can pass index+1 to move down the array. The initial call 
+will pass in index as 0.
+*/
+  public boolean array220(int[] nums, int index) {
+    
+    if (index > nums.length - 2) {
+      return false;
+    }
+    if (nums[index + 1] == nums[index] * 10) {
+      return true;
+    }
+    return array220(nums, index + 1);
+
+  }
+
+/* allStar
+Given a string, compute recursively a new string where all the adjacent chars 
+are now separated by a "*".
+*/
+  public String allStar(String str) {
+    
+    if (str.length() <= 1) {
+      return str;
+    }
+
+    return str.substring(0, 1) + "*" + allStar(str.substring(1));
+
+  }
+
+/* pairStar
+Given a string, compute recursively a new string where identical chars that are
+adjacent in the original string are separated from each other by a "*".
+*/
+  public String pairStar(String str) {
+
+    if (str.length() <= 1) {
+      return str;
+    }
+    if (str.substring(0, 1).equals(str.substring(1, 2))) {
+      return str.substring(0, 1) + "*" + pairStar(str.substring(1));  
+    }
+    return str.substring(0, 1) + pairStar(str.substring(1));
+    
+  }
+
+/* endX
+Given a string, compute recursively a new string where all the lowercase 'x' 
+chars have been moved to the end of the string.
+*/
+  public String endX(String str) {
+    
+    if (str.length() <= 1) {
+      return str;
+    }
+    if (str.substring(0, 1).equals("x")) {
+      return endX(str.substring(1)) + "x";
+    }
+    return str.substring(0, 1) + endX(str.substring(1));
+    
+  }
+
+
 
 }
