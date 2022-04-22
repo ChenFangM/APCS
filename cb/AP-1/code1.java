@@ -118,19 +118,19 @@ public List wordsWithoutList(String[] words, int len) {
   }
 
 /* dividesSelf */
-public boolean dividesSelf(int n) {
-  
-  for (int i = n; i != 0; i = i / 10) {
-  
-    if (i % 10 == 0) {
-      return false;
+  public boolean dividesSelf(int n) {
+    
+    for (int i = n; i != 0; i = i / 10) {
+    
+      if (i % 10 == 0) {
+        return false;
+      }
+      if (n % (i % 10) != 0) {
+        return false;
+      }
     }
-    if (n % (i % 10) != 0) {
-      return false;
-    }
-  }
-  return true;
+    return true;
 
-}
+  }
 
 }
