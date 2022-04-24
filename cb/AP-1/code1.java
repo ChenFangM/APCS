@@ -133,4 +133,46 @@ public List wordsWithoutList(String[] words, int len) {
 
   }
 
+/* copyEvens */
+  public int[] copyEvens(int[] nums, int count) {
+
+    int[] newNums = new int[count];
+    int counter = 0;
+    for (int i = 0; i < nums.length; i ++) {
+      if (counter == count) {
+        break;
+      }
+      if (nums[i] % 2 == 0) {
+        newNums[counter] = nums[i];
+        counter++;
+      }
+    }
+    return newNums;
+
+  }
+
+/* copyEndy */
+  public int[] copyEndy(int[] nums, int count) {
+
+    int[] newNums = new int[count];
+    int counter = 0;
+    for (int num : nums) {
+      if (counter == count) {
+        break;
+      }
+      if (isEndy(num)) {
+        newNums[counter] = num;
+        counter ++;
+      }
+    }
+    return newNums;
+
+  }
+  public boolean isEndy(int n) {
+    
+    return (n >= 0 && n <= 10) || (n >= 90 && n <= 100);
+
+  }
+
+
 }
