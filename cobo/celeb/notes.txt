@@ -12,7 +12,7 @@ QCC
 
 =============================
 
-Activity 2 
+Activity 2
 1. To initialize instance variables
 2. Privacy, non-static, no return type, and takes on the name of the Class
 
