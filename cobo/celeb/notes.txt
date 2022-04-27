@@ -5,19 +5,35 @@ L09 -- Celeb
 time spent: 2 hrs
 
 DiSCO
-
+0. We forgot, now reminded, how trim() works: it's a method of a String instance
+that will "trim" out the spaces in the beginning and/or end of the String.
+1. Subclasses of Celebrity hold clue "processing" methods and a List of clues so 
+that the Celebrity can "draw" a new clue.
 
 QCC
-
+0. 
 
 =============================
+
+Activity 1
+1. Celebrity, Game
+2. List celebList, Celebrity currentCeleb, boolean isCorrect
+3. Play the game, update the score, identify if the guess is correct,
+process a clue.
+4. All of the above
 
 Activity 2
 1. To initialize instance variables
 2. Privacy, non-static, no return type, and takes on the name of the Class
+3. String name, String clue
+4. Accessor and modifier methods
 
 Activity 3
-
-
+2. private ArrayList<Celebrity> celebGameList
+3. private Celebrity gameCelebrity
+12. CelebrityGame handles interactions with Celebrity objects
 
 Activity 4
+1. Class Name: MusicCelerity
+    Attributes:  All inherited from Celebrity, Arraylist<String> clueList
+    Behaviors: All inherited from Celebrity, String getClue()
