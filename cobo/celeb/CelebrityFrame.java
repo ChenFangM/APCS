@@ -1,3 +1,8 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// apcs pd06
+// L09 -- Celeb
+// 2022-04-27
+
 import java.awt.CardLayout;
 
 import javax.swing.JFrame;

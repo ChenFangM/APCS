@@ -1,3 +1,8 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// apcs pd06
+// L09 -- Celeb
+// 2022-04-27
+
 import java.util.ArrayList;
 
 /**
@@ -16,7 +21,7 @@ public class CelebrityGame
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-	 gameWindow = new CelebrityFrame(this);
+	 private CelebrityFrame gameWindow;
 
 	/**
 	 * The ArrayList of Celebrity values that make up the game
@@ -28,6 +33,7 @@ public class CelebrityGame
 	 */
 	public CelebrityGame()
 	{
+		gameWindow = new CelebrityFrame(this);
 		gameCelebrity = null;
 		celebGameList = new ArrayList<Celebrity>();
 	}
@@ -51,7 +57,18 @@ public class CelebrityGame
 	 */
 	public boolean processGuess(String guess)
 	{
-		return false;
+		boolean correct = false;
+		guess = guess.trim();
+		if (guess.equalsIgnoreCase( gameCelebrity.getAnswer() )) {
+			celebGameList.remove(0);
+			correct = true;
+		}
+		if (getCelebrityGameSize() < 0) {
+			gameCelebrity = new Celebrity("", "");
+		} else {
+			gameCelebrity = celebGameList.get(0);
+		}
+		return correct;
 	}
 
 	/**
@@ -61,7 +78,10 @@ public class CelebrityGame
 	 */
 	public void play()
 	{
-
+		if (celebGameList != null && celebGameList.size() > 0) {
+			this.gameCelebrity = celebGameList.get(0);
+			gameWindow.replaceScrren("GAME");
+		}
 	}
 
 	/**
@@ -76,7 +96,9 @@ public class CelebrityGame
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-
+		if (validateCelebrity( name ) && validateClue( guess, type )) {
+			celebGameList.add( new Celebrity( name, guess ));
+		}
 	}
 
 	/**
@@ -108,7 +130,7 @@ public class CelebrityGame
 	 */
 	public int getCelebrityGameSize()
 	{
-		return 0;
+		return celebGameList.size();
 	}
 
 	/**
@@ -119,7 +141,7 @@ public class CelebrityGame
 	 */
 	public String sendClue()
 	{
-		return null;
+		return gameCelebrity.getClue();
 	}
 
 	/**
@@ -130,6 +152,6 @@ public class CelebrityGame
 	 */
 	public String sendAnswer()
 	{
-		return null;
+		return gameCelebrity.getAnswer();
 	}
 }

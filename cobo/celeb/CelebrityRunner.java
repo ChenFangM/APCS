@@ -1,3 +1,8 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// apcs pd06
+// L09 -- Celeb
+// 2022-04-27
+
 /**
  * Starts the Celebrity Game application
  * @author cody.henrichsen
