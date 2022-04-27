@@ -2,6 +2,7 @@
 // apcs pd06
 // L09 -- Celeb
 // 2022-04-27
+// time spent: 2.0 hrs
 
 import java.util.ArrayList;
 
