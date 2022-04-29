@@ -17,6 +17,17 @@ public class CelebrityRunner
 	 */
 	public static void main(String [] args)
 	{
+		Celebrity bruno = new Celebrity("bruno", "singer");
+		System.out.println(bruno.getClue());
+		System.out.println(bruno.getAnswer());
 
+		Celebrity john = new Celebrity("john green", "book");
+
+		CelebrityGame game1 = new CelebrityGame();
+		game1.addCelebrity("bruno", "singer", "Music");
+		game1.addCelebrity("john green", "book", "Literature");
+
+		game1.prepareGame();
+		game1.play();
 	}
 }
