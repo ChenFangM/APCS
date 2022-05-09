@@ -23,7 +23,7 @@ public class BST
 {
 
   //instance variables / attributes of a BST:
-  TreeNode _root;
+  private TreeNode _root;
 
   /**
    * default constructor
@@ -41,13 +41,21 @@ public class BST
   public void insert( int newVal )
   {
     TreeNode newNode = new TreeNode( newVal );
-
+    insert(_root, newNode);
  
   }
   //recursive helper for insert(int)
   public void insert( TreeNode stRoot, TreeNode newNode )
   {
-
+    if (stRoot == null) {
+      stRoot = newNode;
+      return;
+    }
+    if (newNode.getValue() < stRoot.getValue()) {
+      insert(stRoot.getLeft(), newNode);
+    } else {
+      insert(stRoot.getRight(), newNode);
+    }
   }//end insert()
 
 
@@ -83,11 +91,11 @@ public class BST
   public void inOrderTrav( TreeNode currNode )
   {
     if (currNode.getLeft() != null) {
-      preOrderTrav(currNode.getLeft());
+      inOrderTrav(currNode.getLeft());
       System.out.print(currNode.getValue());
     }
     if (currNode.getRight() != null) {
-      preOrderTrav(currNode.getRight());
+      inOrderTrav(currNode.getRight());
       System.out.print(currNode.getValue());
     } 
   }
@@ -95,11 +103,18 @@ public class BST
   //recurse left, recurse right, process root
   public void postOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    postOrderTrav( _root );
   }
   public void postOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    System.out.print(currNode.getValue());
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+    }
+    if (currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+    } 
+    System.out.print(currNode.getValue());
   }
 
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
@@ -109,8 +124,6 @@ public class BST
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
-
       BST arbol = new BST();
 
       //PROTIP: sketch state of tree after each insertion
@@ -126,6 +139,7 @@ public class BST
       System.out.println( "pre-order traversal:" );
       arbol.preOrderTrav();
 
+    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       System.out.println( "\n-----------------------------");
       System.out.println( "in-order traversal:" );
       arbol.inOrderTrav();
