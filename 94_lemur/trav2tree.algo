@@ -1,0 +1,91 @@
+FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+APCS pd6
+HW94 -- reverse engineering
+2022-05-06f
+time spent: 2 hrs
+
+
+DISCO
+------------------------------------------------
+* Recursion would be a good way to perform this algo
+================================================
+
+
+QCC
+------------------------------------------------
+* Would algo for non-binary trees work similarly?
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: 1
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: 1
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: It would depend on how many different groups of connected nodes there are
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: It will traverse through the root first and then end at the rightmost node.
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: It will traverse through the leftmost node first and then end at the root.
+
+Q: What does "1-to-1" mean?
+A: For every one input, there is exactly one output.
+
+Q: What does "onto" mean?
+A: For every input, there is at least one output.
+
+================================================
+
+ALGO with Pre-Order & In-Order
+------------------------------------------------
+
+givens: Pre-Order & In-Order traversals have the same number of nodes, tree is possible
+
+procedure: 
+Start with the first node of pre-order (root)
+Draw the second node, if present, of pre-order as the child of the root
+If the index of the node is before the root in the in-order, it is the left child; else, it is the right child
+Draw the third node, if present, of the pre-order as the child of the second node if its index is before the root in the in-order; else, it is the right child of the root
+If the index of the node is before the second node in the in-order, it is the left child; else, it is the right child
+Repeat step 3 for every node followed in the pre-order with the root being the parent of the parent and the second node being the parent
+
+================================================
+
+ALGO with Post-Order & In-Order
+------------------------------------------------
+
+givens: Post-Order & In-Order traversals have the same number of nodes, tree is possible
+
+procedure: 
+Start with the last node of the post-order (root)
+Find the root node in the in-order (should be located near the middle)
+Partition the nodes of the in-order that are to the left and right of the root node
+Draw the nodes located in the middle of both sides of the partition (these are the children of the root)
+Repeat step 4 until the tree is complete
+
+================================================
+
+ALGO with Pre-Order & Post-Order
+------------------------------------------------
+
+givens: Pre-Order & Post-Order traversals have the same number of nodes, tree is possible
+
+procedure: 
+Start with the first node of the pre-order or last node of the post-order (root)
+Continue working from left to right for the pre-order and right to left for the post-order
+The second node of the pre-order is the left child of the root
+The second to last node of the post-order is the right child of the root
+	Note: This left and right pattern continues until the middle of the traversals are reached
+Repeat step 2 until both traversals have reached the middle of the lists
+The middle of the pre-order traversal is the right child of the most recently found parent node on the left subtree
+The middle of the post-order traversal is the left child of the most recently found parent node on the right subtree
+================================================
