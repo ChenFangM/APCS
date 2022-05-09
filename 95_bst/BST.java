@@ -47,7 +47,7 @@ public class BST
   //recursive helper for insert(int)
   public void insert( TreeNode stRoot, TreeNode newNode )
   {
-    
+
   }//end insert()
 
 
@@ -66,17 +66,30 @@ public class BST
   }
   public void preOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    System.out.print(currNode.getValue());
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+    }
+    if (currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+    } 
   }
 
   //recurse left, process root, recurse right
   public void inOrderTrav()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    inOrderTrav( _root );
   }
   public void inOrderTrav( TreeNode currNode )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    if (currNode.getLeft() != null) {
+      preOrderTrav(currNode.getLeft());
+      System.out.print(currNode.getValue());
+    }
+    if (currNode.getRight() != null) {
+      preOrderTrav(currNode.getRight());
+      System.out.print(currNode.getValue());
+    } 
   }
 
   //recurse left, recurse right, process root
