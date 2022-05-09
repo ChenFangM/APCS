@@ -1,3 +1,9 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// APCS pd06
+// HW 95 -- Algorithm as Data Structure 
+// 2022-05-09
+// time spent: 0.5 hrs
+
 /**
  * class BST
  * v1:partial
@@ -24,7 +30,7 @@ public class BST
    */
   BST()
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    _root = null;
   }
 
 

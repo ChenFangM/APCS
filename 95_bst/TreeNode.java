@@ -2,6 +2,7 @@
 // APCS pd06
 // HW 95 -- Algorithm as Data Structure 
 // 2022-05-09
+// time spent: 0.5 hrs
 
 /**
  * class TreeNode
