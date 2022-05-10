@@ -48,13 +48,21 @@ public class BST
   public void insert( TreeNode stRoot, TreeNode newNode )
   {
     if (stRoot == null) {
-      stRoot = newNode;
+      _root = newNode;
       return;
     }
     if (newNode.getValue() < stRoot.getValue()) {
-      insert(stRoot.getLeft(), newNode);
+      if (stRoot.getLeft() != null) {
+        insert(stRoot.getLeft(), newNode);
+      } else {
+        stRoot.setLeft(newNode);
+      }
     } else {
-      insert(stRoot.getRight(), newNode);
+      if (stRoot.getRight() != null) {
+        insert(stRoot.getRight(), newNode);
+      } else {
+        stRoot.setRight(newNode);
+      }
     }
   }//end insert()
 
@@ -92,11 +100,10 @@ public class BST
   {
     if (currNode.getLeft() != null) {
       inOrderTrav(currNode.getLeft());
-      System.out.print(currNode.getValue());
     }
+    System.out.print(currNode.getValue());
     if (currNode.getRight() != null) {
       inOrderTrav(currNode.getRight());
-      System.out.print(currNode.getValue());
     } 
   }
 
@@ -107,12 +114,11 @@ public class BST
   }
   public void postOrderTrav( TreeNode currNode )
   {
-    System.out.print(currNode.getValue());
     if (currNode.getLeft() != null) {
-      preOrderTrav(currNode.getLeft());
+      postOrderTrav(currNode.getLeft());
     }
     if (currNode.getRight() != null) {
-      preOrderTrav(currNode.getRight());
+      postOrderTrav(currNode.getRight());
     } 
     System.out.print(currNode.getValue());
   }
@@ -139,7 +145,6 @@ public class BST
       System.out.println( "pre-order traversal:" );
       arbol.preOrderTrav();
 
-    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       System.out.println( "\n-----------------------------");
       System.out.println( "in-order traversal:" );
       arbol.inOrderTrav();
@@ -149,6 +154,7 @@ public class BST
       arbol.postOrderTrav();
 
       System.out.println( "\n-----------------------------");
+    /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
