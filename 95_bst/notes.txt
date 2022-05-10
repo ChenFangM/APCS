@@ -5,6 +5,11 @@
 // time spent: 0.5 hrs
 
 With L = level, d = depth, h = height...
-1. a perfect binary tree has ____ nodes
-2. at each level, a perfect binary has ____ nodes
-3. height of a complete binary tree w/ n nodes is ____
+1. a perfect binary tree has 2^(h + 1) - 1 nodes
+2. at each level, a perfect binary has 2^L nodes
+3. height of a complete binary tree w/ n nodes is ceiling(log(n+1) - 1)
+
+h=0 ; n=1
+h=1 ; n=3
+h=2 ; n=7
+h=3 ; n=15
