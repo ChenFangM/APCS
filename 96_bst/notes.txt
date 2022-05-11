@@ -1,0 +1,14 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// APCS pd06
+// HW 96-- Algorithm as Data Structure 
+// 2022-05-09
+// time spent: 0.5 hrs
+
+DISCO 
+0: TreeNode search is just binary search!
+1: And that means that the most optimal method distribution of the
+numbers in the tree is if each parent is the median of all its children.
+
+QCC
+0: Does it matter whether we choose the left or right side when we 
+insert a number that already exists in the tree?
