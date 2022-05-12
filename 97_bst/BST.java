@@ -241,37 +241,45 @@ public class BST
    * void remove(int)
    * removes a node with the value victim
    * 
-   * 
+   * if node with val victim is a leaf, find its mommy and abandon the child
+   * else, 
    */
   public void remove( int victim ) {
-    System.out.print(findMommy(victim, _root).getValue());
+    if (isAlif(search(victim))) {
+      abandon(victim, findMommy(victim, _root));
+      return;
+    }
+
+    boolean ltchild = _root.getLeft() != null;
+    boolean rtchild = _root.getRight() != null;
+
+    // HMM
+
   }
 
   /* Helper Methods */
+  public boolean isAlif( TreeNode node ) {
+    return node.getLeft() == null && node.getRight() == null;
+  }
 
-  // Precond: There exists a node with the value child below currNode, and it is not currNode
-  //         
+  // Precond: There exists a node with the value child below currNode
   public TreeNode findMommy( int child, TreeNode currNode ) {
-    if (currNode == null) {
-      return currNode;
+    TreeNode ptr = currNode;
+    TreeNode tail = null;
+    while (ptr.getValue() != child) {
+      if (ptr.getValue() > child) {
+        tail = ptr;
+        ptr = ptr.getLeft();
+      } else {
+        tail = ptr;
+        ptr = ptr.getRight();
+      }
     }
-    if (currNode.getLeft() != null && currNode.getLeft().getValue() == child) {
-      return currNode;
-    }
-    if (currNode.getRight() != null && currNode.getLeft().getValue() == child) {
-      return currNode;
-    }
-    if (currNode.getValue() > child) {
-      return findMommy(child, currNode.getLeft());
-    }
-    if (currNode.getValue() < child) {
-      return findMommy(child, currNode.getRight());
-    }
-    return null;
+    return tail;
   }
 
   
-  public void remove( int leaf, TreeNode mommy ) {
+  public void abandon( int leaf, TreeNode mommy ) {
     if (mommy.getValue() > leaf) {
       mommy.setLeft(null);
     }
