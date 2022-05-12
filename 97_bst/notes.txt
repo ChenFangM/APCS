@@ -1,0 +1,11 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// APCS pd06
+// HW 97 -- Prune Your Tree
+// 2022-05-12
+// time spent: 1.5 hrs
+
+DISCO
+- Helper methods really do help
+
+QCC
+- What's a better way to do this...?
