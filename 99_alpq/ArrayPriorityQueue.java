@@ -28,7 +28,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
       index --;
     }
     _guillotine.add(index + 1, x);
-  } // 
+  } // Best: O(1) // Worst: O(n)
 
   /**
    * boolean isEmpty()
@@ -36,7 +36,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
    */
   public boolean isEmpty() {
     return _guillotine.size() == 0;
-  }
+  } // O(1)
 
   /**
    * Object peekMin()
@@ -45,7 +45,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
    */
   public int peekMin() {
     return _guillotine.get(0);
-  }
+  } // O(1)
 
     /**
    * Object removeMin()
@@ -54,7 +54,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
    */
   public int removeMin() {
     return _guillotine.remove(0);
-  }
+  } // O(1)
 
 // HAHAHAHAHAHAHAHAHAHAHAHAHA
   public String toString() {
