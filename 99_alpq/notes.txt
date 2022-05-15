@@ -1,0 +1,12 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// APCS pd06
+// HW 99 -- Some Are More Equal Than Others, Codified
+// 2022-05-16
+// time spent: 1.0 hrs
+
+DISCO
+- We should prioritize the lower int values so that our removeMin()
+removed the item of highest priority in the queue. 
+
+QCC
+- 

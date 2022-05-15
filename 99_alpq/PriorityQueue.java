@@ -4,7 +4,7 @@ public interface PriorityQueue {
    * void add(Object)
    * Adds an item to this priority queue
    */
-  public void add(Integer x);
+  public void add(int x);
 
   /**
    * boolean isEmpty()
@@ -17,13 +17,13 @@ public interface PriorityQueue {
    * Returns the smallest item stored in this priority 
    * queue without removing it
    */
-  public Integer peekMin();
+  public int peekMin();
 
     /**
    * Object removeMin()
    * Removes and returns the smallest item stored in 
    * this priority queue.
    */
-  public Integer removeMin();
+  public int removeMin();
 
 }

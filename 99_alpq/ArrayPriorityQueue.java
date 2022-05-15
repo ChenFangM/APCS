@@ -1,3 +1,9 @@
+// FIRE: Fang Chen, Courtney Huang, Brianna Tieu
+// APCS pd06
+// HW 99 -- Some Are More Equal Than Others, Codified
+// 2022-05-16
+// time spent: 1.0 hrs
+
 import java.util.ArrayList;
 
 public class ArrayPriorityQueue implements PriorityQueue {
@@ -12,17 +18,17 @@ public class ArrayPriorityQueue implements PriorityQueue {
    * void add(Object)
    * Adds an item to this priority queue
    */
-  public void add(Integer x) {
+  public void add(int x) {
     if (isEmpty()) {
       _guillotine.add(x);
       return;
     }
     Integer index = _guillotine.size() - 1;
-    while (_guillotine.get(index) < x) {
-      index ++;
+    while (index >= 0 && _guillotine.get(index) > x) {
+      index --;
     }
     _guillotine.add(index + 1, x);
-  }
+  } // 
 
   /**
    * boolean isEmpty()
@@ -37,7 +43,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
    * Returns the smallest item stored in this priority 
    * queue without removing it
    */
-  public Integer peekMin() {
+  public int peekMin() {
     return _guillotine.get(0);
   }
 
@@ -46,11 +52,11 @@ public class ArrayPriorityQueue implements PriorityQueue {
    * Removes and returns the smallest item stored in 
    * this priority queue.
    */
-  public Integer removeMin() {
+  public int removeMin() {
     return _guillotine.remove(0);
   }
 
-// HAHAHAHAHAHAHA
+// HAHAHAHAHAHAHAHAHAHAHAHAHA
   public String toString() {
     String s = "";
     for (int i = 0; i < _guillotine.size(); i++) {
@@ -58,8 +64,7 @@ public class ArrayPriorityQueue implements PriorityQueue {
     }
     return s;
   }
-
-// HEHEHEHEHEHEHE
+// HEHEHEHEHEHEHEHEHEHEHEHEHE
 
   public static void main(String[] args) {
 
