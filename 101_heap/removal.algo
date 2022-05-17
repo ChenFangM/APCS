@@ -1,0 +1,13 @@
+FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
+APCS pd06
+HW101 -- Heap o'Trouble
+2022-05-16
+time spent: 0.6 hrs
+
+Removing from minheap:
+- Traverse the tree, backtracking and proceeding as necessary. Create a
+  reference to the node once it is found.
+- (target == leaf): remove the element
+- (target has one child) - overwrite the node with its child and the subtree
+- (target has two children) - overwrite the node with the smaller of its two
+                              children

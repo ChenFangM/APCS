@@ -1,0 +1,12 @@
+FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
+APCS pd06
+HW101 -- Heap o'Trouble
+2022-05-16
+time spent: 0.6 hrs
+
+DISCO:
+- To traverse the tree, we have to use recursion and backtracking to find target
+  nodes for the remove method.
+
+QCC:
+- Lions or Cows?

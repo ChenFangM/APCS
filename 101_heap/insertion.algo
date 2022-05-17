@@ -1,0 +1,24 @@
+FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
+APCS pd06
+HW101 -- Heap o'Trouble
+2022-05-16
+time spent: 0.6 hrs
+
+Adding to a minheap:
+- (newVal < root): Make newVal the new root and the original root the left child
+                   of newVal.
+- (newVal > root): Traverse down the subtrees, begin with left
+                    - If newVal is less than the left child of the root, make
+                      newVal the left child of root and the original left
+                      child newVal's new left child.
+                    - If newVal is greater than the left child of the root,
+                      compare newVal to the right child of the root and if it is
+                      less than, make newVal the right child of the root and
+                      the original right child newVal's new right child.
+                    - Repeat
+OR a bottom-up technique?:
+- Add newVal to the bottom of the tree
+- Compare newVal to its parent, if it is less than, swap positions, repeating
+  until you reach the root.
+- If newVal is still less than the root, make it the new root and turn the
+  original root newVal's new left child.
