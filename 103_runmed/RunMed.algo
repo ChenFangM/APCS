@@ -1,8 +1,8 @@
-// FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
-// APCS pd06
-// HW103 -- The One in the Middle
-// 2022-05-19
-// time spent: 1.0 hrs
+FIRE: Brianna Tieu, Courtney Huang, Fang Chen
+APCS pd06
+HW103: Erica's Friends, Hugo, and The One in the Middle
+2022-05-18
+time spent: 0.7 hrs
 
 DISCO
 ALHeapMin and ALHeapMax differs by just a few boolean changes
@@ -10,9 +10,10 @@ ALHeapMin and ALHeapMax differs by just a few boolean changes
 QCC
 How is this method more efficient than sorting and locating the median?
 
-ALGO
-Given a set a data, add values one by one in both HeapMin and HeapMax
-HeapMin and HeapMax maintain the invariant that the item at index 0
-is the respective extrema by comparing values with AL.get(0) upon being
-being added. If peeking at HeapMin and HeapMax yields the same value or
-the same value as the other's previous, the goal (median) has been reached.
+algo presented in class:
+1) if next value to be added to heap < root of maxheap --> add to maxheap
+   else, add to minheap
+2) balance both heaps (size difference < 2)
+3) find med by:
+   - if heap sizes ==: med is mean of roots
+   - if heap sizes !=: med is root of larger heap

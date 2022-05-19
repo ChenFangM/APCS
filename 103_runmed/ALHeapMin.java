@@ -1,8 +1,15 @@
-// FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
+// FIRE: Brianna Tieu, Courtney Huang, Fang Chen
 // APCS pd06
-// HW103 -- The One in the Middle
-// 2022-05-19
-// time spent: 1.0 hrs
+// HW103: Erica's Friends, Hugo, and The One in the Middle
+// 2022-05-18
+// time spent: 0.7 hrs
+
+// *** taken from skeleton ***
+
+/**
+ * class ALHeapMin
+ * Implements a min heap using an ArrayList as underlying container
+ */
 
 import java.util.ArrayList;
 
@@ -30,7 +37,7 @@ public class ALHeapMin
   public String toString()
   {
     //simple version:
-    //return _heap.toString(); 
+    //return _heap.toString();
 
     //prettier version:
     String lvlOrdTrav = "heap size " + _heap.size() + "\n";
@@ -177,6 +184,11 @@ public class ALHeapMin
     return retVal;
   }//O(1)
 
+  //~~~~~~~~~~~~~ size accessor ~~~~~~~~~~~~~~~~
+  public int size() {
+    return _heap.size();
+  }
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   //~~~~~~~~~~~~~ aux helper fxns ~~~~~~~~~~~~~~
   private Integer minOf( Integer a, Integer b )
@@ -192,5 +204,60 @@ public class ALHeapMin
   {
     _heap.set( pos1, _heap.set( pos2, _heap.get(pos1) ) );
   }
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-}
+
+
+  //main method for testing
+  public static void main( String[] args )
+  {
+      ALHeapMin pile = new ALHeapMin();
+
+      pile.add(2);
+      System.out.println(pile);
+      pile.add(4);
+      System.out.println(pile);
+      pile.add(6);
+      System.out.println(pile);
+      pile.add(8);
+      System.out.println(pile);
+      pile.add(10);
+      System.out.println(pile);
+      pile.add(1);
+      System.out.println(pile);
+      pile.add(3);
+      System.out.println(pile);
+      pile.add(5);
+      System.out.println(pile);
+      pile.add(7);
+      System.out.println(pile);
+      pile.add(9);
+      System.out.println(pile);
+
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+      System.out.println("removing " + pile.removeMin() + "...");
+      System.out.println(pile);
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+  }//end main()
+
+}//end class ALHeapMin
