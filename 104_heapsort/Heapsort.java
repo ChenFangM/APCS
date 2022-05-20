@@ -1,7 +1,7 @@
 // FIRE -- Brianna Tieu, Courtney Huang, Fang Chen
 // APCS pd06
 // 2022-05-19
-// time spent:
+// time spent: 1.0 hrs
 
 /**
  * class Heapsort
